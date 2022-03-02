@@ -1,6 +1,6 @@
 import homePage from './pages/app-home.cmp.js'
-import keepIndex from './keep/pages/keep-index.cmp.js'
-import mailIndex from './mail/pages/mail-index.cmp.js'
+import keepApp from './keep/pages/keep-app.cmp.js'
+import mailApp from './mail/pages/mail-app.cmp.js'
 
 
 const routes = [
@@ -11,13 +11,13 @@ const routes = [
 
     {
         path: '/mail',
-        component: mailIndex,
+        component: mailApp,
         
     },
 
     {
         path: '/keep',
-        component: keepIndex,
+        component: keepApp,
        
     },
 ];
