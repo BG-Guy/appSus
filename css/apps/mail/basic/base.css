@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: play, serif;
+}
+
+body {
+    margin: 0;
+    font-size: 0.875rem;
+    background-color: var(--clr1);
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clrBlack);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0;
+    font-weight: 400;
+}
+
+p{
+    margin: 0;
+}

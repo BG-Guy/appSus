@@ -1,0 +1,52 @@
+.search-nav{
+    background-color: #c7c7c799;
+    padding: 10px;
+    border-radius: 13px;
+    width: auto;
+    margin-top: 10px;
+}
+
+.search-nav > *{
+    margin: 0 10px;
+}
+
+.search-nav input{
+    cursor: pointer;
+}
+
+.books-area{
+    flex-wrap: wrap;
+}
+
+.book-card{
+    width: 200px;
+    padding-bottom: 10px;
+    background-color: var(--clr2);
+    border: 1px solid var(--clrText);
+    border-radius: 8px;
+    margin: 14px;
+    box-shadow: 8px 7px 8px -3px rgb(0 0 0 / 60%);
+    transform: scale(1);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.book-card:hover{
+    transform: scale(1.07);
+}
+
+.book-card img{
+    width: 95%;
+    margin-top: 5px;
+}
+
+.book-card .book-title{
+    margin-top: 15px;
+    font-size: large;
+    text-align: center;
+}
+
+.book-card .book-price{
+    margin-top: 5px;
+    font-style: italic;
+}

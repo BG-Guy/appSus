@@ -1,0 +1,8 @@
+footer{   
+    background-color: var(--clr3);
+}
+
+.app-footer{
+    height: 70px;
+    font-size: x-large;
+}

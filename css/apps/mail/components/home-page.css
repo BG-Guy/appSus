@@ -1,0 +1,14 @@
+.home-page{
+    position: relative;
+}
+
+.home-quote{
+    position: absolute;
+    top: 10%;
+    z-index: 10;
+    color: white;
+    text-transform: uppercase;
+    padding-left: 2%;
+    font-family: inherit;
+    font-size: 2rem;
+}

@@ -1,0 +1,29 @@
+header{   
+    background-color: var(--clr3);
+}
+
+.app-head{
+    height: 70px;
+    font-size: x-large;
+}
+
+.logo, .nav-bar > *{
+    cursor: pointer;
+}
+
+.logo{
+    width: 140px;
+}
+
+.nav-bar > *{
+    padding-bottom: 17px;
+}
+
+.nav-bar .router-link-active{
+}
+
+.nav-bar .router-link-exact-active{
+    color: var(--clrGreenNav);
+    padding-bottom: 17px;
+    box-shadow: inset 0px -2px 0px 0px var(--clrGreenNav);
+}
