@@ -1,5 +1,6 @@
 import homePage from './pages/app-home.cmp.js'
-import aboutPage from './pages/app-about.cmp'
+import appKeep from './keep/pages/keep-app.cmp.js'
+import appMail from './mail/pages/mail-app.cmp.js'
 
 const routes = [
     {
@@ -8,32 +9,14 @@ const routes = [
     },
     {
         path: '/mail',
-        component: aboutPage,
-        // children: [
-        //     {
-        //         path: 'team',
-        //         component: aboutTeam
-        //     },
-        //     {
-        //         path: 'services',
-        //         component: aboutServices
-        //     },
-        // ]
+        component: appMail,
+        
     },
 
     {
         path: '/keep',
-        component: aboutPage,
-        // children: [
-        //     {
-        //         path: 'team',
-        //         component: aboutTeam
-        //     },
-        //     {
-        //         path: 'services',
-        //         component: aboutServices
-        //     },
-        // ]
+        component: appKeep,
+       
     },
 ];
 
