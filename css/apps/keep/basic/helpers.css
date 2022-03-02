@@ -4,24 +4,30 @@
     display: flex;
 }
 
-.flex.space-between {
+.space-between {
     justify-content: space-between;
+    display: flex;
+
 }
 
-.flex.space-around {
+.space-around {
     justify-content: space-around;
+    display: flex;
+
 }
 
-.flex.justify-center {
+.align-center {
     justify-content: center;
-}
-
-.flex.align-center {
+    display: flex;
     align-items: center;
 }
 
-.flex.column {
+
+
+.column {
     flex-direction: column;
+    display: flex;
+
 }
 
 

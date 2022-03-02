@@ -3,6 +3,6 @@ footer{
 }
 
 .app-footer{
-    height: 70px;
+    min-height: 18.75rem;
     font-size: x-large;
 }

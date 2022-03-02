@@ -1,24 +1,24 @@
+// import { router } from '../../router.js';
+// import appFooter from '../cmps/app-footer.cmp.js';
+// import appHeader from './cmps/app-header.cmp.js';
+// import userMsg from './cmps/user-msg.cmp.js';
+
 export default {
+    
     template: `
-    
+        <!-- <section>
+            <app-header />
+            <user-msg />
+            <router-view />
+            <app-footer />
+        </section> -->
     `,
+    components: {
+        // appHeader,
+        // appFooter,
+        // userMsg,
+        // router
+    }
+};
 
-    data() {
-        return {
 
-        },
-    },
-
-    created() {
-
-    },
-
-    methods: {
-
-    },
-
-    computed: {
-
-    },
-    
-}
