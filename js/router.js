@@ -2,7 +2,6 @@ import homePage from './pages/app-home.cmp.js'
 import aboutPage from './pages/app-about.cmp'
 import aboutPag from './pages/app-about.cmp'
 
-
 const routes = [
     {
         path: '/',
