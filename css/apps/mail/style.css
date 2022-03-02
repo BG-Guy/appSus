@@ -1,8 +1,5 @@
 /* SETUP  */
 
-@import 'setup/vars.css';
-@import 'setup/typography.css';
-
 /* BASE */
 
 @import 'basic/base.css';
@@ -16,6 +13,6 @@
 @import 'components/footer.css';
 @import 'components/details-page.css';
 @import 'components/modals.css';
-@import 'components/books-page.css';
+@import 'components/details-page.css';
 @import 'components/home-page.css';
 /* @import 'components/screen.css'; */

@@ -10,16 +10,21 @@ const routes = [
     },
 
     {
-        path: '/mail',
+        path: '/mail-app',
         component: mailApp,
         
     },
 
     {
-        path: '/keep',
+        path: '/keep-app',
         component: keepApp,
        
     },
+    // {
+    //     path: '/book-app',
+    //     component: bookApp,
+       
+    // },
 ];
 
 export const router = VueRouter.createRouter({
