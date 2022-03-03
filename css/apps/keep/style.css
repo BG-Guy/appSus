@@ -2,17 +2,17 @@
 
 /* BASE */
 
-@import 'basic/base.css';
-@import 'basic/layout.css';
-@import 'basic/helpers.css';
-@import 'basic/mq.css';
+/* @import url('.basic/base.css');
+@import url('.basic/layout.css');
+@import url('.basic/helpers.css');
+@import url('.basic/mq.css'); */
 
 /* COMPONENTS */
 
-@import 'components/header.css';
-@import 'components/footer.css';
-@import 'components/details-page.css';
-@import 'components/modals.css';
-@import 'components/books-page.css';
-@import 'components/home-page.css';
+
+
+@import './components/notes-list.css';
+@import './components/todo-list.css';
+
+@import './components/note-details.css';
 /* @import 'components/screen.css'; */

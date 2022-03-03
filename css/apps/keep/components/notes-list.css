@@ -1,0 +1,19 @@
+.note {
+    width: 20rem;
+    height: 20rem;
+    border-radius: .5rem;
+    border: 1px solid black;
+}
+
+.actions {
+    width: 100%;
+    background-color: #E5E7E9;
+    border-radius: 5px;
+    margin-top: 0;
+
+    
+}
+
+.note-list-container {
+    display: flex;
+}
