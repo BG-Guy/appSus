@@ -9,11 +9,8 @@
 
 /* COMPONENTS */
 
-@import 'components/header.css';
-@import 'components/footer.css';
-@import 'components/details-page.css';
-@import 'components/modals.css';
-@import 'components/details-page.css';
+@import 'components/mail-preview.css';
 @import 'components/mail-page.css';
-@import 'components/home-page.css';
+
+
 /* @import 'components/screen.css'; */

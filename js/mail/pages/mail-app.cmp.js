@@ -12,7 +12,7 @@ export default {
     <section class="mail-app app-main">
         <mail-label @choose="setChoose" /> 
         <router-link to="/mail-app/edit" >send new mail</router-link>
-    <mail-list :mails="mailsForDisplay"  @remove="removeMail"/>
+    <mail-list :mails="mailsForDisplay" @unRemove="unRemoveMail" @remove="removeMail"  />
     </section>
   </div>   
     `,
@@ -53,16 +53,20 @@ export default {
         })
     },
     removeMail(id) {
-      
       const idx = this.mails.findIndex((mail) => mail.id === id);
-      if(this.mails[idx].isDeleted){
-        mailService.remove(this.mails[idx])
-      }
-      this.mails[idx].isDeleted = !this.mails[idx].isDeleted;
-      mailService.save(this.mails[idx]);
-      this.mails.splice(idx,1)
+       
+         this.mails[idx].isDeleted = true
+        mailService.save(this.mails[idx]);
+        this.mails.splice(idx,1)
       // eventBus.emit('show-msg', { txt: 'Deleted succesfully', type: 'success' });
-    },
+      },
+      unRemoveMail(id) {
+        const idx = this.mails.findIndex((mail) => mail.id === id);
+      this.mails[idx].isDeleted = !this.mails[idx].isDeleted;
+      }
+    
+
+   
   },
   computed: {
     mailsForDisplay() {
