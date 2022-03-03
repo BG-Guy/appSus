@@ -63,8 +63,8 @@ if (!notes || notes.length < 1) {
     {
         id: utilService.makeId(),
         type: 'noteTodos',
-        bgc: 'lightblue',
-        isPinned: true,
+        bgc: '#F2F3F4',
+        isPinned: false,
         info: {
             label: "Enter A Todo",
             todos: [
@@ -88,8 +88,8 @@ if (!notes || notes.length < 1) {
     {
         id: utilService.makeId(),
         type: 'noteText',
-        bgc: 'lightblue',
-        isPinned: true,
+        bgc: '#F2F3F4',
+        isPinned: false,
         info: {
             txt: "Fullstack Me Baby!",
             color: 'red'
@@ -100,7 +100,7 @@ if (!notes || notes.length < 1) {
     {
         id: utilService.makeId(),
         type: 'noteTodos',
-        bgc: 'lightblue',
+        bgc: '#F2F3F4',
         isPinned: false,
         info: {
             label: "Enter A Todo",
@@ -125,7 +125,7 @@ if (!notes || notes.length < 1) {
     {
         id: utilService.makeId(),
         type: 'noteImg',
-        bgc: 'lightblue',
+        bgc: '#F2F3F4',
         isPinned: false,
         info: {
             url: "http://some-img/me",
@@ -138,7 +138,7 @@ if (!notes || notes.length < 1) {
     {
         id: utilService.makeId(),
         type: 'noteVideo',
-        bgc: 'lightblue',
+        bgc: '#F2F3F4',
         isPinned: false,
         info: {
             label: "Enter A Todo",
@@ -151,8 +151,8 @@ if (!notes || notes.length < 1) {
     {
         id: utilService.makeId(),
         type: 'noteTodos',
-        bgc: 'lightblue',
-        isPinned: true,
+        bgc: '#F2F3F4',
+        isPinned: false,
         info: {
             label: "Enter A Todo",
             todos: [

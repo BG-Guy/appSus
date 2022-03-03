@@ -4,7 +4,7 @@
           <section >
               <label>
                 <div class="todo-input space-around">
-                  <input :style="placeHolderStyle()" :placeholder="note.info.label" type="text" v-model="val"/>
+                  <input :placeholder="note.info.label" type="text" v-model="val"/>
                   <div class="importance-btn space-between">
                     <i @click="setImportance(1)" class="importance high" ></i>
                     <i @click="setImportance(2)" class="importance medium" ></i>
@@ -93,18 +93,7 @@
         this.todoColor = color
 
         if(idx || idx === 0) this.todos[idx].color = this.todoColor
-        this.placeHolderStyle()
       },
-
-      placeHolderStyle() {
-        return {
-          "color": this.todoColor
-        }
-      },
-
-      
-
-
 
     },
     computed: {
