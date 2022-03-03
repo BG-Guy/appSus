@@ -2,17 +2,17 @@
 
 /* BASE */
 
-@import 'basic/base.css';
+/* @import 'basic/base.css';
 @import 'basic/layout.css';
-@import 'basic/helpers.css';
-@import 'basic/mq.css';
+/* @import 'basic/helpers.css'; */
+/* @import 'basic/mq.css'; */ 
 
 /* COMPONENTS */
 
-@import 'components/header.css';
-@import 'components/footer.css';
-@import 'components/details-page.css';
-@import 'components/modals.css';
-@import 'components/details-page.css';
-@import 'components/home-page.css';
+@import './components/header.css';
+@import './components/footer.css';
+@import './components/details-page.css';
+@import './components/modals.css';
+@import './components/details-page.css';
+@import './components/home-page.css';
 /* @import 'components/screen.css'; */

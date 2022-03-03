@@ -1,37 +1,45 @@
-/* flex */
+
 
 .flex {
     display: flex;
 }
 
-.flex.space-between {
+.space-between {
     justify-content: space-between;
+    display: flex;
+
 }
 
-.flex.space-around {
+.space-around {
     justify-content: space-around;
+    display: flex;
+
 }
 
-.flex.justify-center {
+.align-center {
     justify-content: center;
-}
-
-.flex.align-center {
+    display: flex;
     align-items: center;
 }
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    
+}
 
-.flex.column {
+
+
+.column {
     flex-direction: column;
+    display: flex;
+
 }
 
 
 /* list */
 
-.clean-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
+
 
 
 /* color */

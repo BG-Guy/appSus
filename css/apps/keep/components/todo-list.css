@@ -1,0 +1,108 @@
+.todo {
+    width: 100%;
+    margin-bottom: .2rem;
+    border-radius: 5px;
+    height: 2rem;
+}
+
+.add-btn {
+    background-color: #AEB6BF;
+    border-width: 0px;
+    width: 3.4rem;
+    padding: 0;
+    margin: 0;
+
+}
+
+.add-btn:hover {
+    cursor: pointer;
+}
+
+.close {
+    border: 0;
+    background-color: #AEB6BF;
+    width: 2.3rem;
+}
+
+.close:hover {
+    cursor: pointer;
+}
+
+
+.todo-input {
+    margin: auto;
+    width: 100%;
+    margin-bottom: .5rem;
+    background-color: #F2F3F4;
+    height: 2rem;
+
+}
+
+.todo-input input {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0px;
+    background-color:#F2F3F4;
+    text-align: center;
+}
+
+
+
+.todo-input::placeholder {
+    background-color: #F2F3F4;
+    margin: 0;
+    padding: 0;
+}
+
+
+.importance {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: auto;
+    
+
+}
+
+.importance:hover {
+    cursor: pointer;
+}
+
+.high {
+    background-color: #D35400;
+}
+
+.medium {
+    background-color: #F4D03F;
+}
+
+.low {
+    background-color: #28B463;
+}
+
+.no {
+    background-color: #FDFEFE;
+}
+
+.importance-btn {
+   width: 30%;
+   /* background-color: #F2F3F4; */
+   border-radius: 3px;
+   align-items: center;
+}
+
+
+
+.right-side-todo {
+    margin-left: auto;
+    display: flex;
+
+}
+
+.right-side-todo .importance-btn {
+    width: 4rem;
+}
+
+
+

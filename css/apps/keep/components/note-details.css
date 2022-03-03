@@ -1,0 +1,18 @@
+.done {
+    text-decoration: line-through;
+
+}
+
+.undone {
+    text-decoration: none;
+
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.close-btn:hover {
+    cursor: pointer;
+}
