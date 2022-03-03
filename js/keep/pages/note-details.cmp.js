@@ -3,7 +3,7 @@ import notePreview from '../cmps/note-preview.cmp.js';
 
 export default {
     template: `
-        <section>
+        <section class="notes-list-container" >
             <router-link to="/keep-app">Back to notes</router-link>
             <note-preview :note="note"></note-preview>
         </section>
