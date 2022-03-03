@@ -1,0 +1,46 @@
+.mail-coulmn{
+   gap:1rem;
+    padding: .7rem;
+  }
+  .mail-prew{
+    margin-bottom: 1rem;
+    flex-grow: 3;
+    gap:1rem; 
+    margin-inline: 1rem;
+    display: flex;
+    justify-content: space-around;
+    
+  }
+  .mail-line-list{
+    /* display: flex;
+    gap: 1.5rem;
+    flex-grow: 1; */
+  }
+  .mail-actions{
+        /* display: flex;
+        justify-content:space-between; */
+      
+  }
+  
+.mail-coulmn:hover{
+    background-color: darkgrey;
+    cursor: pointer;
+  
+  }
+  .star {
+    visibility:hidden;
+    font-size:1.5rem;
+    cursor:pointer;
+    color:gold;
+  }
+  .star:before {
+   content: "\2605";
+   position: relative;
+   visibility:visible;
+   bottom: 0.7rem;
+  }
+  .star:checked:before {
+   content: "\2606";
+   position: relative;
+   bottom: 0.7rem;
+  }

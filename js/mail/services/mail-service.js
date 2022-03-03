@@ -147,7 +147,7 @@ function getMailsInMode(mode) {
       case "starred":
         return mails.filter((mail) => mail.importent);
       case "sent":
-        return mails.filter((mail) => mail.sent);
+        return mails.filter((mail) => mail.sent && !mail.isDeleted);
       case "Trash":
         return mails.filter((mail) => mail.isDeleted);
       case "Draft":
