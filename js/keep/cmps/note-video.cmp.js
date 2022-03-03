@@ -1,7 +1,7 @@
 export default {
     props: ['note'],
     template: `
-        <section class="note note-img">
+        <section >
         <iframe width="400" height="200px"
             src="https://www.youtube.com/embed/CJbR7K0E2Z4">
             </iframe>

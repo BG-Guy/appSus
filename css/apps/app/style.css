@@ -1,10 +1,10 @@
+@import './basic/base.css';
 @import './components/app-footer.css';
 @import './components/app-home.css';
 @import './components/user-msg.css';
 @import './components//app-header.css';
 @import './setup/typography.css';
 @import './setup/vars.css';
-@import './basic/base.css';
 
 @import './basic/helpers.css';
 
