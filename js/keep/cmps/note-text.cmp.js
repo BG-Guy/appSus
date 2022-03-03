@@ -1,7 +1,7 @@
 export default {
     props: ["note"],
     template: `
-        <section class="note"  >
+        <section   >
             <p contenteditable="true" >{{ txt }}</p>
         </section>
     `,
