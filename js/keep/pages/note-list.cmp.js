@@ -19,6 +19,7 @@ export default {
                     <note-preview :note="note" ></note-preview>
                     <div class="actions-two">
                         <i @click="onSetPin(note)"  >PIN NOTE</i>
+                        <i @click="duplicateNote(note)" > DUPLICATE NOTE </i>
                     </div>
                 </li>
             </ul>

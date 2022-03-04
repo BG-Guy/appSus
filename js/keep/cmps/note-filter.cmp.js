@@ -8,7 +8,7 @@ export default {
                     @input="filterNotes" 
                     type="text" 
                     v-model="filterBy" 
-                    placeholder="Magic Search"
+                    placeholder="Search"
                 />
             </label>
         </section>
