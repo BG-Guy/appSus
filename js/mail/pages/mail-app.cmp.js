@@ -7,11 +7,10 @@ import mailEdit from "./mail-edit.cmp.js";
 
 export default {
   template: `
-    <div class ="main-app">
+    <div class ="main-app main-layout">
          <mail-filter @filtered="setFilter" />  
     <section class="mail-app app-main">
         <mail-label @choose="setChoose" /> 
-        <router-link to="/mail-app/edit" >send new mail</router-link>
     <mail-list :mails="mailsForDisplay" @unRemove="unRemoveMail" @remove="removeMail"  />
     </section>
   </div>   

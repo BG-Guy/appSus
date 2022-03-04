@@ -1,0 +1,9 @@
+.search-filter{
+    margin: 0 auto;
+    width: 80vw;
+    
+}
+.search-filter input{
+    width: 60%;
+  padding: 1rem;
+}

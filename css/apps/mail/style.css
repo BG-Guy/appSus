@@ -11,6 +11,10 @@
 
 @import 'components/mail-preview.css';
 @import 'components/mail-page.css';
+@import 'components/mail-label.css';
+@import 'components/mail-filter.css';
+@import 'components/mail-edit.css';
+@import 'components/mail-details.css';
 
 
 /* @import 'components/screen.css'; */

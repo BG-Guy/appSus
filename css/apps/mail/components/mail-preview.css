@@ -11,22 +11,36 @@
     justify-content: space-around;
     
   }
-  .mail-line-list{
-    /* display: flex;
-    gap: 1.5rem;
-    flex-grow: 1; */
-  }
-  .mail-actions{
-        /* display: flex;
-        justify-content:space-between; */
-      
+  .mail-status{
+   font-size: 1.5rem;
   }
   
 .mail-coulmn:hover{
     background-color: darkgrey;
     cursor: pointer;
+    margin-bottom: .5rem;
+    font-weight: bolder;
   
   }
+  
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+  
+
+  
+.read{
+  background-color:  inherit;
+}
+.unread{
+  background-color:  darkgrey;
+}
   .star {
     visibility:hidden;
     font-size:1.5rem;
@@ -43,4 +57,22 @@
    content: "\2606";
    position: relative;
    bottom: 0.7rem;
+  }
+  .trash{
+   font-size: 1.5rem;
+   border: none;
+   cursor: pointer;
+   background-color:  inherit;
+  }
+  .trash:hover{
+   font-weight: bold;
+  }
+  .btn-delte:hover{
+   font-weight: bold;
+  }
+  .btn-delte{
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    background-color:  inherit;
   }

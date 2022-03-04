@@ -6,22 +6,23 @@ import { eventBus } from '../../services/eventBus-service.js';
 
 export default {
     template: `
-    <router-link :to="'/mail-app'">back</router-link> 
-<div class="mail-form mail-list">
-    <div>
-        To  <input v-model="mail.name" type="text" class="form-control">
+ <section class="edit">
+      <label class="back">
+          <router-link :to="'/mail-app'">📫</router-link> 
+      </label>
+   <div class="mail-form flex">
+        <input v-model="mail.name" type="text" placeholder="to" class="form-control">
+         <input  v-model="mail.subject" placeholder="subject" type="text" class="form-control">
+         <textarea name="text" v-model="mail.body"  placeholder="message" class="text-area" >
+             {{getTexArea}}
+            </textarea>
+    <section class="mail-actions">
+         <button @click="send" class="send" > 📤 </button>
+         <button @click="draft" class="trash">🗑 </button>
+   </section>
     </div>
-    <div class="">
-         subject <input  v-model="mail.subject" type="text" class="form-control">
-    </div>
-    <textarea name="text" v-model="mail.body" class="text-area" ref="msgBody" >
-        {{getTexArea}}
-    </textarea>
-    <label class="actions">
-   <button @click="send"> send </button>
-   <button @click="draft"> Draft </button>
-         </label>
-</div>
+
+ </section>
 
     `,
 
@@ -48,7 +49,6 @@ export default {
         }
     },
     mounted() {
-        this.$refs.msgBody.focus()
     },
 
     methods: {
