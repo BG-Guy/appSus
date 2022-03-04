@@ -3,6 +3,7 @@ import { mailService } from "../services/mail-service.js";
 import mailFilter from "../cmps/mail-filter.cmp.js";
 import mailLabel from "../cmps/mail-label.cmp.js";
 import mailEdit from "./mail-edit.cmp.js";
+
 // import { eventBus } from '../services/eventBus-service.js';
 
 export default {
@@ -11,7 +12,9 @@ export default {
          <mail-filter @filtered="setFilter" />  
     <section class="mail-app app-main">
         <mail-label @choose="setChoose" /> 
-    <mail-list :mails="mailsForDisplay" @unRemove="unRemoveMail" @remove="removeMail"  />
+        <button @click="setCount"> </button>
+        <div id="myBar" class="count" style="width:20%">20%</div>
+    <mail-list :mails="mailsForDisplay"  @remove="removeMail"  @unRemove="unRemoveMail" />
     </section>
   </div>   
     `,
@@ -22,6 +25,8 @@ export default {
       selectedMail: null,
       filterBy: null,
       mode: null,
+      unreadMails:null,
+      count:null,
     };
   },
 
@@ -30,6 +35,7 @@ export default {
     mailFilter,
     mailLabel,
     mailEdit,
+   
   },
 
   created() {
@@ -51,22 +57,39 @@ export default {
           this.mails =mails
         })
     },
-    removeMail(id) {
-      const idx = this.mails.findIndex((mail) => mail.id === id);
-       
-         this.mails[idx].isDeleted = true
-        mailService.save(this.mails[idx]);
-        this.mails.splice(idx,1)
-      // eventBus.emit('show-msg', { txt: 'Deleted succesfully', type: 'success' });
-      },
-      unRemoveMail(id) {
-        const idx = this.mails.findIndex((mail) => mail.id === id);
-      this.mails[idx].isDeleted = !this.mails[idx].isDeleted;
+  
+     removeMail(id) {
+    const idx = this.mails.findIndex((mail) => mail.id === id);
+      if(this.mails[idx].isDeleted) {
+      } else{
+          this.mails[idx].isDeleted = true
+         mailService.save(this.mails[idx])
+           this.mails.splice(idx,1)
       }
+    },
+      // eventBus.emit('show-msg', { txt: 'Deleted succesfully', type: 'success' });
+    
+
+     unRemoveMail(id) {
+      const idx = this.mails.findIndex((mail) => mail.id === id);
+      this.mails[idx].isDeleted = !this.mails[idx].isDeleted;
+       mailService.save(this.mails[idx]);
+      this.mails= mailService.query()
+      },
+      setCount(){
+        this.unreadMails= this.mails.filter((mail) => !mail.isRead)
+        console.log( this.unreadMails.length);
+        console.log(this.mails.length)
+         this.count = mailService.percentage(this.unreadMails.length, this.mails.length).toFixed(0)
+      },
+
+
+
+      
     
 
    
-  },
+    },
   computed: {
     mailsForDisplay() {
       if (!this.filterBy && !this.mode) return this.mails.filter((mail) => (!mail.isDeleted) &&
@@ -75,5 +98,6 @@ export default {
       const regex = new RegExp(this.filterBy, "i");
       return this.mails.filter((mail) => regex.test(mail.body) || regex.test(mail.name));
     },
+   
   },
 };

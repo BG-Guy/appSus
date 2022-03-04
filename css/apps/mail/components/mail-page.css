@@ -30,7 +30,11 @@
 ul{
   list-style: none;
 }
-span{
-  flex-grow:1;
+button::after{
+  border: none;
+}
+
+#myBar{
+  width: 100%;
 }
   

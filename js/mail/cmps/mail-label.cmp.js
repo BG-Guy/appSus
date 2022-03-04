@@ -7,14 +7,13 @@ export default {
             📤
             </label>
             </router-link>
-           
-        <label class="filter">
+        <section class="filter">
             <button @click="setFilter('inbox')"> inbox </button>
-            <button @click="setFilter('starred')"> starred </button>
-            <button @click="setFilter('sent')"> sent </button>
-            <button @click="setFilter('Draft')"> Drafts </button>
-            <button @click="setFilter('Trash')"> Trash </button>
-         </label>
+            <button @click="setFilter('starred')" > starred </button>
+            <button @click="setFilter('sent')" > sent </button>
+            <button @click="setFilter('Draft')" >  Drafts </button>
+            <button @click="setFilter('Trash')" > Trash </button>
+         </section>
       </div> 
       
     `,

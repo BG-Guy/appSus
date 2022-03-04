@@ -4,22 +4,27 @@ import { mailService } from '../services/mail-service.js';
 export default {
     props:['mail'],
     template: `
-<section :class='isRead' class="mail-coulmn space-between" @click="setRead">
+<section :class='isRead' class="mail-coulmn flex" @click="setRead">
     <input class="star" type="checkbox" @click="setImportent" :checked='!mail.importent'>
-  <div class="mail-prew">
-             <router-link :to="'/mail-app/details/'+mail.id">
+    <router-link :to="'/mail-app/details/'+mail.id">
+  <div class="mail-prew flex space-between">
       <span> {{mail.name}} </span>
       <span>  {{mail.subject}}</span>
       <span>{{ mail.body}}</span>
       <span> {{mail.sentAt}}</span>
       <span> {{mail.addressee}}</span>
-     </router-link>
-  </div>
+    </div>
+</router-link>
     
    <section class="mail-actions flex">
-       <button type="button" v-if="mail.isDeleted" @click="unRemoveMail(mail.id)" class="btn-delte">⤴</button>
-       <span class="mail-status"> {{checkMailStatus}}</span>
+       <label>
+       <button type="button" v-if="mail.isDeleted" @click="unRemoveMail(mail.id)"
+        class="btn-delte"> ⤴</button>
+   </label>
+       <span class="mail-status" v-if="!mail.isDeleted"> {{checkMailStatus}}</span>
+       <label>
        <button type="button" @click="removeMail(mail.id)"  class="trash">🗑 </button>
+    </label>  
    </section>
 
 </section>

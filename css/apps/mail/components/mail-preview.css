@@ -1,14 +1,11 @@
 .mail-coulmn{
-   gap:1rem;
     padding: .7rem;
+    gap:1rem;
   }
   .mail-prew{
     margin-bottom: 1rem;
-    flex-grow: 3;
     gap:1rem; 
-    display: flex;
-    justify-content: space-around;
-    
+    flex-direction: row;
   }
   .mail-status{
    font-size: 1.5rem;
@@ -30,6 +27,12 @@
 .list-leave-to {
   opacity: 0;
   transform: translateX(30px);
+}
+.mail-action{
+  flex-grow: 1;
+}
+.mail-coulmn a{
+ flex-grow: 3;
 }
   
 
@@ -75,3 +78,6 @@
     cursor: pointer;
     background-color:  inherit;
   }
+   .mail-prew span{
+    flex-grow:1;
+  } 

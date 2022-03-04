@@ -75,6 +75,7 @@ export const mailService = {
   get,
   getMailsInMode,
   getEmptyMail,
+  percentage
 };
 
 function query() {
@@ -153,9 +154,13 @@ function getMailsInMode(mode) {
       case "Draft":
         return mails.filter((mail) => mail.isDraft);
       case "inbox":
-        return mails.filter((mail) => !mail.isDeleted && !mail.sent);
+        return mails.filter((mail) => !mail.isDeleted && !mail.sent && !mail.isDraft);
     }
   });
 }
 
+function percentage(num, per){
+  return (num/per)*100;
+}
+     
 // getModeMails(this.mode ,this.mails)
