@@ -33,6 +33,10 @@ import { noteService } from "../services/note.service.js";
 
                       </div>
                       </li>
+                      <div class="sort-btns">
+                        <span @click="sort('accending')">⏫</span>
+                        <span @click="sort('decending')">⏬</span>
+                      </div>
                   </ul>
               </label>  
           </section>
@@ -42,7 +46,6 @@ import { noteService } from "../services/note.service.js";
       return {
         val: "",
         todos: [],
-        currTodoIdx: null,
         importance: '',
         todoColor: '#F2F3F4',
       }
@@ -95,19 +98,29 @@ import { noteService } from "../services/note.service.js";
       },
 
       setImportance(val, idx) {
-        this.importance = val
         let color
         if (val === 1) color = '#D35400' 
         if (val === 2) color = '#F4D03F' 
         if (val === 3) color = '#28B463' 
         if (val === 4) color = '#F2F3F4' 
-
+        this.todos[idx].importance = val
         this.todoColor = color
 
         if(idx || idx === 0) this.todos[idx].color = this.todoColor
         this.updateNote()
         noteService.update(this.note)
       },
+
+      sort(sortBy) {
+        
+        if (sortBy === 'accending') this.todos.sort( (a,b) => {
+          return a.importance - b.importance
+        } )
+        if (sortBy === 'decending') this.todos.sort((a,b) => {
+          return b.importance - a.importance
+        })
+        console.log(this.todos);
+      }
 
     },
     computed: {

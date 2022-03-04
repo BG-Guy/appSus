@@ -44,7 +44,7 @@ function update(note) {
 function createNote(noteType, bgc, info) {
     
     let note = {
-        id: utilService.makeId,
+        id: utilService.makeId(),
         type: noteType,
         bgc: bgc,
         isPinned: false,
@@ -72,13 +72,13 @@ if (!notes || notes.length < 1) {
                 txt: 'Work Hard Play Hard',
                 isDone: false,
                 color: '#F2F3F4',
-                importance: null,
+                importance: 4,
             },
             {
                 txt: 'Drving Liscence',
                 isDone: false,
                 color: '#F2F3F4',
-                importance: null,
+                importance: 4,
             },
         ],
     },
@@ -109,13 +109,13 @@ if (!notes || notes.length < 1) {
                 txt: 'Work Hard Play Hard',
                 isDone: false,
                 color: '#F2F3F4',
-                importance: null,
+                importance: 4,
             },
             {
                 txt: 'Work Hard Play Hard',
                 isDone: false,
                 color: '#F2F3F4',
-                importance: null,
+                importance: 4,
             },
         ],
     },
@@ -129,7 +129,7 @@ if (!notes || notes.length < 1) {
         isPinned: false,
         info: {
             url: "http://some-img/me",
-            title: "Bobi and Me",
+            txt: "Bobi and Me",
         
     },
  
@@ -160,13 +160,13 @@ if (!notes || notes.length < 1) {
                 txt: 'Work Hard Play Hard',
                 isDone: false,
                 color: '#F2F3F4',
-                importance: null,
+                importance: 4,
             },
             {
                 txt: 'Work Hard Play Hard',
                 isDone: false,
                 color: '#F2F3F4',
-                importance: null,
+                importance: 4,
             },
         ],
     },

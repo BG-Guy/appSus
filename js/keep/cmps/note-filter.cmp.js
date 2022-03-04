@@ -2,21 +2,23 @@ export default {
     props:['notes'],
     template: `
         <section class="car-filter">
-            <label>
                 Search
-                <input ref="vendorInput" 
-                    @input="filterNotes" 
-                    type="text" 
+                <input type="text"
+                    @input="setFilter" 
                     v-model="filterBy" 
-                    placeholder="Magic Search"
-                />
-            </label>
+                    placeholder="Search">
+
+                <i class="filter-btn" @click="setFilterBy('noteTodos')">Todos Note</i>
+                <i class="filter-btn" @click="setFilterBy('noteImg')">Image Note</i>
+                <i class="filter-btn" @click="setFilterBy('noteVideo')">Video Note</i>
+                <i class="filter-btn" @click="setFilterBy('noteText')">Text Note</i>
         </section>
     `,
 
     data() {
         return {
             filterBy: null,
+            type: null,
         }
     },
 
@@ -29,9 +31,11 @@ export default {
             this.$emit('filtered', { ...this.filterBy });
 
         },
-        filterNotes() {
-           
-    },
+       
+
+        setFilterBy(type) {
+            this.$emit('filtered', type)
+        }
     
  },
 
