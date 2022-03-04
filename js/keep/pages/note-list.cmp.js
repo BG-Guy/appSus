@@ -1,4 +1,6 @@
 import notePreview from '../cmps/note-preview.cmp.js'
+import { noteService } from '../services/note.service.js';
+import { utilService } from '../../services/util-service.js';
 
 export default {
     props: ['notes'],
@@ -19,7 +21,7 @@ export default {
                     <note-preview :note="note" ></note-preview>
                     <div class="actions-two">
                         <i @click="onSetPin(note)"  >PIN NOTE</i>
-                        <i @click="duplicateNote(note)" > DUPLICATE NOTE </i>
+                        <i @click="onDuplicateNote(note)" > DUPLICATE NOTE </i>
                     </div>
                 </li>
             </ul>
@@ -62,6 +64,21 @@ export default {
         onSetPin(note) {
             note.isPinned = !note.isPinned
             
+        },
+
+        onDuplicateNote(note) {
+            console.log(note);
+            let noteType = note.type
+            let bgc = note.bgc
+            let info = note.info
+            let newNote = noteService.createNote(noteType, bgc, info)
+            this.notes.push(newNote)
+            noteService.update(newNote)
+            console.log(this.notes);
+            
+            
+            
+
         }
        
     },
