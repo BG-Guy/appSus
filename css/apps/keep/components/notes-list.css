@@ -2,12 +2,21 @@
    width: 20rem;
     border-radius: .5rem;
     padding: .5rem;
-
+    display: flex;
+    flex-direction: column;
     order: 5;
     box-shadow: 0 10px 10px 2px rgba(0,0,0,0.3);
     margin-bottom: 1rem;
+    transition: .3s;
 
 
+}
+
+.notes-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 90vh;
 }
 
 .video-frame {
@@ -28,6 +37,11 @@
     border-radius: 5px;
     margin-top: 0;
 
+    
+}
+
+.actions-two {
+   margin-top: auto;
     
 }
 

@@ -5,7 +5,7 @@ export default {
     template: `
         <section class="notes-list-container" >
             <ul class="notes-list wrap space-around ">
-                <li v-for="note in notes" :key="note.id" :style="setBgc(note)" :class="" @click="onSetPin(note)" :style="setPin(note)" class="note" >
+                <li v-for="note in notes" :key="note.id" :style="setBgc(note)" :style="setPin(note)" class="note" >
                     <div class="actions">
                             <router-link :to="'/keep-app/'+note.id">Enter Full Screen</router-link>
                            <i class="close-btn" @click="remove(note.id)">☒</i>
@@ -17,6 +17,9 @@ export default {
                            <i class="color-btn grey" @click="onSetBgc(note, '#D7DBDD')" ></i>
                     </div>
                     <note-preview :note="note" ></note-preview>
+                    <div class="actions-two">
+                        <i @click="onSetPin(note)"  >PIN NOTE</i>
+                    </div>
                 </li>
             </ul>
         </section>
