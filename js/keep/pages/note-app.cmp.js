@@ -68,6 +68,7 @@ export default {
         noteForDisplay() {
             if (!this.filterBy) return this.notes
             let res = this.notes.filter((note) => note.type === this.filterBy)
+            console.log(res);
             if (res) return res
             const regex = new RegExp(this.filterBy, 'i');
             return this.notes.filter(note => regex.test(note.info.txt));
