@@ -12,7 +12,6 @@ export default {
          <mail-filter @filtered="setFilter" />  
     <section class="mail-app app-main">
         <mail-label @choose="setChoose" /> 
-        <button @click="setCount"> </button>
         <div class="mail-bar">
           <div class="count" :style="setBarStyle">{{getCount}}</div>
 
