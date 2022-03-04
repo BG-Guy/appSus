@@ -1,3 +1,5 @@
+import { noteService } from "../services/note.service.js";  
+  
   export default {
   props:['note'],
     template: `
@@ -60,6 +62,9 @@
           importance: this.importance
       })
       this.val = ''
+          this.updateNote()
+          noteService.update(this.note)
+          console.log(this.note);
           
       },
 
@@ -71,15 +76,22 @@
 
       deleteTodo(idx) {
         this.todos = this.todos.splice((idx, 1))
+        this.updateNote()
+        noteService.update(this.note)
       },
 
       markTodoAsDone(idx) {
         this.todos[idx].isDone = !this.todos[idx].isDone
+        this.updateNote()
         
       },
       ifDone(idx) {
          return (todos[idx].isDone === true) ? {done: true} : {undone: true}
 
+      },
+
+      updateNote() {
+        this.note.info.todos = this.todos
       },
 
       setImportance(val, idx) {
@@ -93,6 +105,8 @@
         this.todoColor = color
 
         if(idx || idx === 0) this.todos[idx].color = this.todoColor
+        this.updateNote()
+        noteService.update(this.note)
       },
 
     },

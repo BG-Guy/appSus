@@ -112,7 +112,7 @@ if (!notes || notes.length < 1) {
                 importance: null,
             },
             {
-                todoTxt: 'Work Hard Play Hard',
+                txt: 'Work Hard Play Hard',
                 isDone: false,
                 color: '#F2F3F4',
                 importance: null,
