@@ -13,7 +13,10 @@ export default {
     <section class="mail-app app-main">
         <mail-label @choose="setChoose" /> 
         <button @click="setCount"> </button>
-        <div id="myBar" class="count" style="width:20%">20%</div>
+        <div class="mail-bar">
+          <div class="count" :style="setBarStyle">{{getCount}}</div>
+
+        </div>
     <mail-list :mails="mailsForDisplay"  @remove="removeMail"  @unRemove="unRemoveMail" />
     </section>
   </div>   
@@ -26,7 +29,7 @@ export default {
       filterBy: null,
       mode: null,
       unreadMails:null,
-      count:null,
+      count:0,
     };
   },
 
@@ -42,6 +45,10 @@ export default {
     mailService.query().then((mails) => {
       this.mails = mails;
     });
+
+    
+
+    
   },
   methods: {
     selectMail(mail) {
@@ -80,8 +87,16 @@ export default {
         this.unreadMails= this.mails.filter((mail) => !mail.isRead)
         console.log( this.unreadMails.length);
         console.log(this.mails.length)
-         this.count = mailService.percentage(this.unreadMails.length, this.mails.length).toFixed(0)
+         this.count = mailService.percentage(this.unreadMails.length, this.mails.length).toFixed(0).toString() + '%'
+         console.log(this.count);
       },
+
+      setBarStyle() {
+
+        return {
+          'width': this.count,
+        }
+      }
 
 
 
@@ -98,6 +113,12 @@ export default {
       const regex = new RegExp(this.filterBy, "i");
       return this.mails.filter((mail) => regex.test(mail.body) || regex.test(mail.name));
     },
+
+    getCount() {
+      return this.count
+    }
+
+   
    
   },
 };

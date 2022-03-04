@@ -34,7 +34,15 @@ button::after{
   border: none;
 }
 
-#myBar{
-  width: 100%;
+.mail-bar {
+  width: 75vw;
+  height: 5vh;
+  background-color: #fff;
+}
+
+.count {
+  height: 100%;
+  background-color: #439B13;
+  color: white;
 }
   
