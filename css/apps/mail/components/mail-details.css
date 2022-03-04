@@ -1,0 +1,30 @@
+.details{
+    margin: auto;
+    width: 50vw;
+    padding: 2rem;
+    height: 60vh;
+}
+.mail-read{
+    background-color: rgb(211, 211, 211);
+    width: 60%;
+    margin: 0 auto;
+    height: 60%;
+    padding: .6rem;
+    box-shadow: 0 10px 10px 2px rgba(0,0,0,0.3);
+ } 
+ .mail-msg{
+     padding: 1rem;
+ }
+ 
+
+  .mail-adress{
+    gap: 0.5rem;
+  }
+  span.mail{
+    color: lightslategrey;
+  }
+  .mail-header{
+ 
+    flex-direction: row;
+    
+  }

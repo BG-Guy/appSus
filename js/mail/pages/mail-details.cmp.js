@@ -5,23 +5,29 @@ import { mailService } from '../services/mail-service.js';
 
 export default {
     template: `
-     <router-link :to="'/mail-app'">back</router-link> 
-    <section class="mail-read">
-        <div class="mail-header">
+ <section class="details">
+      <label class="back">
+          <router-link :to="'/mail-app'">📫</router-link> 
+      </label> 
+  <section class="mail-read">
+        <div class="mail-header space-between">
     <h1> {{mailToRead.subject}} </h1>
     <section class="icons">
-        <button @click="sendMail"> send </button>
-        <button @click="removeMail"> trash </button>
+        <button @click="sendMail" class="send"> 📤 </button>
+        <button @click="removeMail" class="trash"> 🗑 </button>
      </section>
    </div>
-    <div class="mail-adress">
+    <div class="mail-adress flex">
    <span> {{mailToRead.name}} </span>
    <span class="mail"> {{'<' + mailToRead.to +'>'}}</span>
- </div>
-    <pre>
+   <span class="mail"> {{mailToRead.sentAt}}</span>
+   </div>
+    <p class="mail-msg">
     {{mailToRead.body}}
-   </pre>
-  </section>   
+    </p>
+   </section>   
+</section>
+
     
     `,
 

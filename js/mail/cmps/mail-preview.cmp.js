@@ -16,11 +16,10 @@ export default {
      </router-link>
   </div>
     
-   <section class="mail-actions">
-       <button type="button" v-if="mail.isDeleted" @click="unRemoveMail(mail.id)" class="btn-delte"> &#10555</button>
-       <img :src=checkMailStatus class="mail-box">
-       <button type="button" @click="removeMail(mail.id)" class="btn-delte">
-           <img src="../mail-img/mail-close.png" alt="delete"> </button>
+   <section class="mail-actions flex">
+       <button type="button" v-if="mail.isDeleted" @click="unRemoveMail(mail.id)" class="btn-delte">⤴</button>
+       <span class="mail-status"> {{checkMailStatus}}</span>
+       <button type="button" @click="removeMail(mail.id)"  class="trash">🗑 </button>
    </section>
 
 </section>
@@ -47,7 +46,7 @@ export default {
             mailService.save(this.mail)
         },
         setRead(){
-            this.mail.isRead= !this.mail.isRead
+            this.mail.isRead= true
             mailService.save(this.mail)
         },
     },
@@ -58,7 +57,7 @@ export default {
         },
         checkMailStatus(){
             if(this.mail.isDeleted) return;
-            return (this.mail.isRead) ? '../mail-img/mail-open.png': '../mail-img/mail-open.png'
+            return (this.mail.isRead) ? '✉': '📧'
         }
 
     },

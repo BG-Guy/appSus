@@ -1,0 +1,32 @@
+.filter button{
+   background-color: none;
+   border: none;
+   padding: 1rem;
+}
+.filter button:hover{
+    color: rgb(182, 24, 24);
+   background-color: var(--clrRed);
+   font-weight: bold;
+   cursor: pointer;
+}
+ .filter{
+    display: flex;
+    flex-direction: column;
+    gap:0
+  } 
+
+  .side-bar{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+  }
+  .new-mail{
+      border-radius: 12px;
+      padding: 1rem;
+      cursor: pointer;
+      background-color: white;
+      font-size: 1.5rem;
+  }
+  .new-mail:hover{
+    font-weight: bold;
+  }

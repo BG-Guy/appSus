@@ -1,13 +1,21 @@
 
 export default {
     template: `
-          <label class="filter">
+       <div class="side-bar">
+       <router-link to="/mail-app/edit" >
+            <label class= "send">
+            📤
+            </label>
+            </router-link>
+           
+        <label class="filter">
             <button @click="setFilter('inbox')"> inbox </button>
             <button @click="setFilter('starred')"> starred </button>
             <button @click="setFilter('sent')"> sent </button>
             <button @click="setFilter('Draft')"> Drafts </button>
             <button @click="setFilter('Trash')"> Trash </button>
          </label>
+      </div> 
       
     `,
     data(){
