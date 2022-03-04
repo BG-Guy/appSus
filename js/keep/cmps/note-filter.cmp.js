@@ -28,13 +28,13 @@ export default {
 
     methods: {
         setFilter() {
-            this.$emit('filtered', { ...this.filterBy });
+            this.$emit('filtered', this.filterBy.slice());
+            
 
         },
        
-
         setFilterBy(type) {
-            this.$emit('filtered', type)
+            this.$emit('filterType', type)
         }
     
  },

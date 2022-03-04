@@ -7,7 +7,7 @@ import noteFilter from '../cmps/note-filter.cmp.js';
 export default {
     template: `
         <section v-if="notes">
-            <note-filter @filtered="setFilter" ></note-filter>
+            <note-filter @filtered="setFilter" @filterType="setTypeFilter" ></note-filter>
             <note-add @addNote="updateNotes" ></note-add>
             <note-list @remove="removeNote" :notes="noteForDisplay" />
         </section>
@@ -23,7 +23,7 @@ export default {
         return {
             notes: null,
             filterByType: null,
-            filterByTxt: null,
+            filterBy:null,
 
         };
     },
@@ -57,8 +57,12 @@ export default {
             });
     },
 
+    setTypeFilter(type) {
+        this.filterByType = type
+        console.log(this.filterBy);
+    },
+
     setFilter(type) {
-        
         this.filterBy = type
         console.log(this.filterBy);
     }
@@ -66,14 +70,13 @@ export default {
     },
     computed:{
         noteForDisplay() {
-            if (!this.filterBy) return this.notes
-            let res = this.notes.filter((note) => note.type === this.filterBy)
-            console.log(res);
-            if (res) return res
-            const regex = new RegExp(this.filterBy, 'i');
-            return this.notes.filter(note => regex.test(note.info.txt));
+            if (!this.filterBy && !this.filterByType) return this.notes
+            let res = this.notes.filter((note) => note.type === this.filterByType)
+            if (res && !this.filterBy) return res
+            const regex = new RegExp(this.filterBy, "i");
+            return this.notes.filter((note) => regex.test(note.info.txt))
+            
 
         }
-        
     },
 }
