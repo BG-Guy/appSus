@@ -129,7 +129,7 @@ if (!notes || notes.length < 1) {
         isPinned: false,
         info: {
             url: "http://some-img/me",
-            title: "Bobi and Me",
+            txt: "Bobi and Me",
         
     },
  

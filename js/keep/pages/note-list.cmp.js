@@ -75,10 +75,6 @@ export default {
             this.notes.push(newNote)
             noteService.update(newNote)
             console.log(this.notes);
-            
-            
-            
-
         }
        
     },

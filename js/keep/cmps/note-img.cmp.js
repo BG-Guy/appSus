@@ -2,7 +2,7 @@ export default {
     props: ['note'],
     template: `
 
-            <p>{{ note.info.title }}</p>
+            <p>{{ note.info.txt }}</p>
             <img :src="note.info.url" />
 
     `,
