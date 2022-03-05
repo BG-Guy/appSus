@@ -15,6 +15,7 @@
 @import 'components/mail-filter.css';
 @import 'components/mail-edit.css';
 @import 'components/mail-details.css';
+@import 'mq-mail.css';
 
 
 /* @import 'components/screen.css'; */

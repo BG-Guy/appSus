@@ -8,7 +8,7 @@ import { showErrorMsg, showSuccessMsg } from '../../services/eventBus-service.js
 
 export default {
   template: `
-    <div class ="main-app main-layout">
+    <div class ="mail-main-app main-layout">
          <mail-filter @filtered="setFilter" />  
     <section class="mail-app app-main">
         <mail-label @choose="setChoose" /> 
