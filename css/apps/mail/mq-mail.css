@@ -1,5 +1,5 @@
 
-@media (max-width: 650px) {
+@media (max-width: 600px) {
     .mail-coulmn {
         gap: 0;
     }
@@ -10,24 +10,14 @@
         padding: 0;
 
     }
-
-
-    
-
-    .side-bar {
-        flex-direction: row;
-    }
-
     .mail-list{
-        width: 90%
+        width: 100%;
+        margin-left: 0;
     }
     .mail-main-app{
+        height: fit-content;
         display: flex;
         flex-direction: column;
-        align-items: baseline;
-        width: 90vw;
-        flex: 1;
-
     }
     .filter{
         flex-direction: row;
@@ -35,22 +25,22 @@
         gap: 0.2rem;
     }
     .mail-bar{
-        align-self: start;
-        width: 40%;
+        align-self: end;
+        width: 50%;
         order: -1;
     }
     .mail-prew{
+        gap:0;
         padding: 0.5rem;
         display: inline-block;
     }
     .search-filter input{
-        width: 95%;
+        width: 100%;
         padding: .7rem;
     }
     .mail-coulmn{
         justify-content: space-evenly;
         width: 100%;
-        padding: 0px;
     }
     .edit{
         width: 100%;
@@ -58,27 +48,35 @@
     .details{
         width: 100%;
     }
+    .mail-list-container{
+        width: 95vw;
+        margin-left: 0;
+    }
+    .side-bar{
+        gap:1rem;
+    }
+    .mail-form{
+        width: 60vw;
+        height: 60vh;
+    }
+    .search-filter{
+        width: 40%;
 
-    .mail {
-        width: 100%;
     }
 }
 
 
 
 /* SMALL */
-
+@media (max-width: 650px) {
+    .mail-coulmn {
+        gap: 0;
+    }
+}
 
 @media (max-width: 800px) {
 .mail-app{
     width: 95%;
     padding: 1rem;
 }
-
-}
-
-
-/* MEDIUM */
-
-@media (min-width: 800px) {
 }
