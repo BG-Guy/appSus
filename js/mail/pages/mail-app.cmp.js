@@ -68,10 +68,12 @@ export default {
     const idx = this.mails.findIndex((mail) => mail.id === id);
       if(this.mails[idx].isDeleted) {
         mailService.remove(id)
+        return this.mails.splice(idx,1)
       } else{
+        console.log('hi');
           this.mails[idx].isDeleted = true
          mailService.save(this.mails[idx])
-          //  this.mails.splice(idx,1)
+            this.mails.splice(idx,1)
       }
     },
       // eventBus.emit('show-msg', { txt: 'Deleted succesfully', type: 'success' });
@@ -84,13 +86,7 @@ export default {
       this.mails= mailService.query()
       },
 
-     
-
-
-
-      
     
-
    
     },
   computed: {
