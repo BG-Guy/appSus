@@ -8,18 +8,17 @@ import { showErrorMsg, showSuccessMsg } from '../../services/eventBus-service.js
 export default {
     template: `
  <section class="edit">
-      <label class="back">
-          <router-link :to="'/mail-app'">📫</router-link> 
-      </label>
-   <div class="mail-form flex">
+     
+     <div class="mail-form flex">
+       <router-link :to="'/mail-app'"><svg class="back"></svg></router-link> 
         <input v-model="mail.name" type="text" placeholder="to" class="form-control">
          <input  v-model="mail.subject" placeholder="subject" type="text" class="form-control">
          <textarea name="text" v-model="mail.body"  placeholder="message" class="text-area" >
              {{getTexArea}}
             </textarea>
     <section class="mail-actions">
-         <button @click="send" class="send" > 📤 </button>
-         <button @click="draft" class="trash">🗑 </button>
+    <svg @click="send" class="sent-mail-btn icon"></svg>
+    <svg @click="draft" class="delete-btn icon"></svg>
    </section>
     </div>
 

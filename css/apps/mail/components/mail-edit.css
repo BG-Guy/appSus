@@ -1,18 +1,26 @@
 .back{
-font-size: 1.5rem;
+    background: url('../../../../icons/undo-icon.svg');
+    width: 1rem;
+    height: 1rem;
 }
 .edit{
     margin: auto;
-    width: 50vw;
-    padding: 2rem;
+    width: 100vw;
     height: 60vh;
 }
-.send{
-    font-size: 1.5rem;
-    border: none;
-    cursor: pointer;
-    background-color:  inherit;
+
+.sent-mail-btn {
+    background: url('../../../../icons/sent-icon-btn.svg');
+    height: 1rem;
+    width: 1rem;
 }
+
+.delete-btn {
+    background: url('../../../../icons/trash-icon.svg');
+    height: 1rem;
+    width: 1rem;
+}
+
 
 .text-area{
     width: 100%;
