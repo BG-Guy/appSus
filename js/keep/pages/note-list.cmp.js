@@ -10,7 +10,7 @@ export default {
                 <li v-for="note in notes" :key="note.id" :style="setBgc(note)" :style="setPin(note)" class="note" >
                     <div class="actions">
                         
-                            <router-link :to="'/keep-app/'+note.id"><svg class="full-screen"></svg></router-link>
+                            <router-link :to="'/keep-app/details/'+note.id"><svg class="full-screen"></svg></router-link>
                            <svg class="close-btn icon" @click="remove(note.id)"></svg>
                            <i class="color-btn yellow" @click="onSetBgc(note, '#F7DC6F')"></i>
                            <i class="color-btn red" @click="onSetBgc(note, '#E74C3C')" ></i>
@@ -49,10 +49,11 @@ export default {
         },
         onSetBgc(note, color) {
             note.bgc = color
-
+            noteService.update(note)
         },
 
         setBgc(note) {
+
             return {'background-color': note.bgc}
         },
         setPin(note) {
@@ -61,6 +62,7 @@ export default {
 
         onSetPin(note) {
             note.isPinned = !note.isPinned
+            noteService.update(note)
             
         },
 

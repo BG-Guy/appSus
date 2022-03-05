@@ -1,18 +1,29 @@
 .done {
-    text-decoration: line-through;
-
+  text-decoration: line-through;
 }
 
 .undone {
-    text-decoration: none;
-
+  text-decoration: none;
 }
 
 .actions {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .close-btn:hover {
-    cursor: pointer;
+  cursor: pointer;
+}
+.note-details {
+  width: 30vw;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  flex-direction: column;
+  box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
+  transition: 0.3s;
+}
+.notes-list-container {
+height: 70vh;
 }

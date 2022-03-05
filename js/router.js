@@ -31,7 +31,7 @@ const routes = [
        
     },
     {
-        path: '/keep-app/:noteId',
+        path: '/keep-app/details/:noteId',
         component: noteDetails
       }
     // {

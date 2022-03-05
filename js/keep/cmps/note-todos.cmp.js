@@ -76,7 +76,9 @@ import { noteService } from "../services/note.service.js";
       todoStyle(idx) {        
           return {
             "background-color": this.todos[idx].color
+            
           }
+          
       },
 
       deleteTodo(idx) {
@@ -106,10 +108,7 @@ import { noteService } from "../services/note.service.js";
         if (val === 3) this.todoColor = '#28B463' 
         if (val === 4) this.todoColor = '#F2F3F4' 
         this.todos[idx].importance = val
-
-
         if (idx || idx === 0) this.todos[idx].color = this.todoColor
-        this.updateNote()
         noteService.update(this.note)
       },
 

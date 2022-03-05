@@ -5,7 +5,7 @@ export default {
     template: `
         <section class="notes-list-container" >
             <router-link to="/keep-app">Back to notes</router-link>
-            <note-preview :note="note"></note-preview>
+            <note-preview :note="note" class="note-details" :style="{backgroundColor: note.bgc}"></note-preview>
         </section>
     `,
 
