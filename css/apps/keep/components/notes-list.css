@@ -43,9 +43,48 @@ i:hover {
 }
 
 .full-screen {
-    background-image: url('https://www.flaticon.com/free-icons/full-screen');
-    width: 5px;
-    height: 5px;
+    background-image: url('../../../../icons/full-screen-icon.svg');
+    width: 1rem;
+    height: 1rem;
+    transition: .3s;
+
+}
+
+.full-screen:hover {
+    transform: scale(1.2);
+    transition: .3s;
+}
+
+.close-btn {
+    background: url('../../../../icons/close-icon.svg');
+    width: 1rem;
+    height: 1rem;
+    transition: transform .25s;
+}
+
+.close-btn:hover {
+    transform: rotate(270deg);
+    -webkit-transition:-webkit-transform .25s;
+          -moz-transition:-moz-transform .25s;
+                   transition: transform .25s;
+		
+	
+}
+
+.pin-btn {
+    background: url('../../../../icons/pin-icon.svg');
+    width: 1rem;
+    height: 1rem; 
+}
+
+.duplicate-btn {
+    background: url('../../../../icons/duplicate-note-icon.svg');
+    width: 1rem;
+    height: 1rem;
+}
+
+.icon:hover {
+    cursor: pointer;
 }
 
   
