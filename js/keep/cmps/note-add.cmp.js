@@ -45,7 +45,7 @@ data() {
             if (this.noteType === 'noteVideo') info = {url: this.txt}
             if (this.noteType === 'noteText') info = {txt: this.txt}
 
-            this.note = noteService.createNote(this.noteType,this.txt, 'F2F3F4', info)
+            this.note = noteService.createNote(this.noteType,this.txt, '#F2F3F4', info)
             this.$emit('addNote', this.note)
         },
 

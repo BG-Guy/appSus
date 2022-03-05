@@ -17,6 +17,10 @@
     align-items: center;
 }
 
+.nav-bar >*:hover {
+    color: aliceblue;
+}
+
 .appsus-logo {
     width: 3rem;
     

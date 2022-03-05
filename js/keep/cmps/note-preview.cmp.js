@@ -7,6 +7,7 @@ import noteAudio from './note-audio.cmp.js'
 export default {
   props: ['note'],
   template: `
+        
         <component  :is="note.type" :note="note"></component>
               
               `,

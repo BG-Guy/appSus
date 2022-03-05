@@ -4,8 +4,11 @@ import notePreview from '../cmps/note-preview.cmp.js';
 export default {
     template: `
         <section class="note-details-container" >
+            
             <router-link to="/keep-app">Back to notes</router-link>
+            
             <note-preview :note="note" class="note-details" :style="{backgroundColor: note.bgc}"></note-preview>
+            
         </section>
     `,
 
