@@ -3,8 +3,8 @@ import { mailService } from "../services/mail-service.js";
 import mailFilter from "../cmps/mail-filter.cmp.js";
 import mailLabel from "../cmps/mail-label.cmp.js";
 import mailEdit from "./mail-edit.cmp.js";
+import { showErrorMsg, showSuccessMsg } from '../../services/eventBus-service.js';
 
-// import { eventBus } from '../services/eventBus-service.js';
 
 export default {
   template: `
@@ -12,12 +12,11 @@ export default {
          <mail-filter @filtered="setFilter" />  
     <section class="mail-app app-main">
         <mail-label @choose="setChoose" /> 
-        <button @click="setCount"> </button>
         <div class="mail-bar">
           <div class="count" :style="setBarStyle">{{getCount}}</div>
 
         </div>
-    <mail-list :mails="mailsForDisplay"  @remove="removeMail"  @unRemove="unRemoveMail" />
+    <mail-list :mails="mailsForDisplay" @read="setCount" @remove="removeMail"  @unRemove="unRemoveMail" />
     </section>
   </div>   
     `,
@@ -68,41 +67,34 @@ export default {
      removeMail(id) {
     const idx = this.mails.findIndex((mail) => mail.id === id);
       if(this.mails[idx].isDeleted) {
+        mailService.remove(id)
+        showSuccessMsg('Deleted succesfully');
+        return this.mails.splice(idx,1)
       } else{
+        console.log('hi');
           this.mails[idx].isDeleted = true
          mailService.save(this.mails[idx])
-           this.mails.splice(idx,1)
+            this.mails.splice(idx,1)
+            showSuccessMsg('Deleted succesfully');
       }
     },
-      // eventBus.emit('show-msg', { txt: 'Deleted succesfully', type: 'success' });
     
 
      unRemoveMail(id) {
       const idx = this.mails.findIndex((mail) => mail.id === id);
       this.mails[idx].isDeleted = !this.mails[idx].isDeleted;
        mailService.save(this.mails[idx]);
-      this.mails= mailService.query()
-      },
-      setCount(){
-        this.unreadMails= this.mails.filter((mail) => !mail.isRead)
-        console.log( this.unreadMails.length);
-        console.log(this.mails.length)
-         this.count = mailService.percentage(this.unreadMails.length, this.mails.length).toFixed(0).toString() + '%'
-         console.log(this.count);
+      // this.mails= mailService.query()
+      this.mails.splice(idx,1)
       },
 
-      setBarStyle() {
-
-        return {
-          'width': this.count,
-        }
-      }
-
-
-
+<<<<<<< HEAD
       
       
 
+=======
+    
+>>>>>>> 1ff0f3e2cc85d631fc0dcb49006b75771206543f
    
     },
   computed: {
@@ -116,6 +108,16 @@ export default {
 
     getCount() {
       return this.count
+    },
+    setCount(){
+      this.unreadMails= this.mails.filter((mail) => !mail.isRead)
+       this.count = mailService.percentage(this.unreadMails.length, this.mails.length).toFixed(0).toString() + '%'
+    },
+    setBarStyle() {
+
+      return {
+        'width': this.count,
+      }
     }
 
    

@@ -1,6 +1,7 @@
 
 import { router } from '../../router.js';
-import { eventBus } from '../../services/eventBus-service.js';
+import { showErrorMsg, showSuccessMsg } from '../../services/eventBus-service.js';
+
 import { mailService } from '../services/mail-service.js';
 
 export default {
@@ -57,6 +58,7 @@ export default {
             this.mailToRead.isDeleted= true
             mailService.save(this.mailToRead)
             router.push('/mail-app')
+            showSuccessMsg('Deleted succesfully');
         },
         sendMail(){
             router.push('/mail-app/edit/'+this.mailToRead.id)

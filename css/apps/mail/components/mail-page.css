@@ -35,14 +35,15 @@ button::after{
 }
 
 .mail-bar {
-  width: 75vw;
+  width: 100%;
   height: 5vh;
   background-color: #fff;
 }
 
 .count {
   height: 100%;
-  background-color: #439B13;
+  background-color: #fc3d3dcc;
   color: white;
+  text-align: center;
 }
   
