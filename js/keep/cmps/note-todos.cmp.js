@@ -14,13 +14,13 @@ import { noteService } from "../services/note.service.js";
                     <i @click="setImportance(3)" class="importance low" ></i>
                     <i @click="setImportance(4)" class="importance no" ></i>
                   </div>
-                  <button @click="addTodo" class="add-btn" :style="todoColor"  >Add</button>
+                  <svg @click="addTodo" class="add-btn icon" :style="todoColor"  ></svg>
 
                 </div>
                   <ul>
                     <li :style="todoStyle(idx)" class="todo space-between" v-for="(todo, idx) in todos" >
                       <div class="left-side-todo align-center">
-                        <i  class="todo-done-btn" ></i>
+                        <i  class="todo-done-btn"></i>
                         <input type="checkbox"value="todo.isDone" @input="markTodoAsDone(idx)" >
                         <p contenteditable="true" :class="ifDone(idx)">{{ todo.txt }}</p>
                       </div>
@@ -36,8 +36,8 @@ import { noteService } from "../services/note.service.js";
                       </div>
                       </li>
                       <div class="sort-btns">
-                        <span @click="sort('accending')">⏫</span>
-                        <span @click="sort('decending')">⏬</span>
+                        <svg @click="sort('accending')" class="accending-btn icon" ></svg>
+                        <svg @click="sort('decending')" class="decending-btn icon" ></svg>
                       </div>
                   </ul>
               </label>  

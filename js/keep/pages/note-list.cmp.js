@@ -9,8 +9,9 @@ export default {
             <ul class="notes-list wrap space-around ">
                 <li v-for="note in notes" :key="note.id" :style="setBgc(note)" :style="setPin(note)" class="note" >
                     <div class="actions">
-                            <router-link :to="'/keep-app/'+note.id" class="full-screen">Enter Full Screen</router-link>
-                           <i class="close-btn" @click="remove(note.id)">☒</i>
+                        
+                            <router-link :to="'/keep-app/'+note.id"><svg class="full-screen"></svg></router-link>
+                           <svg class="close-btn icon" @click="remove(note.id)"></svg>
                            <i class="color-btn yellow" @click="onSetBgc(note, '#F7DC6F')"></i>
                            <i class="color-btn red" @click="onSetBgc(note, '#E74C3C')" ></i>
                            <i class="color-btn purple" @click="onSetBgc(note, '#A569BD')" ></i>
@@ -20,8 +21,8 @@ export default {
                     </div>
                     <note-preview :note="note" ></note-preview>
                     <div class="actions-two">
-                        <i @click="onSetPin(note)"  >PIN NOTE</i>
-                        <i @click="onDuplicateNote(note)" > DUPLICATE NOTE </i>
+                        <svg @click="onSetPin(note)" class="pin-btn icon" ></svg>
+                        <svg @click="onDuplicateNote(note)" class="duplicate-btn icon" ></svg>
                     </div>
                 </li>
             </ul>
