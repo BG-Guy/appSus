@@ -2,6 +2,7 @@ import noteText from './note-text.cmp.js'
 import noteImg from './note-img.cmp.js'
 import noteVideo from './note-video.cmp.js'
 import noteTodos from './note-todos.cmp.js'
+import noteAudio from './note-audio.cmp.js'
 
 export default {
   props: ['note'],
@@ -14,7 +15,8 @@ export default {
             noteText,
             noteImg,
             noteVideo,
-            noteTodos
+            noteTodos,
+            noteAudio
         },
         data() {
             return {};
