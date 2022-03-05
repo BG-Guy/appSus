@@ -5,6 +5,10 @@
     height: 2rem;
 }
 
+.todo-done-btn {
+    
+}
+
 .note-title {
     width: 100%;
     display: flex;

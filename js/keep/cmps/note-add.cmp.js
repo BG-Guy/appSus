@@ -51,8 +51,13 @@ export default {
             if (msg === 'noteImg')  this.noteTypeMsg = 'Insert Img URL'
             if (msg === 'noteVideo')  this.noteTypeMsg = 'Insert YouTube URL'
             if (msg === 'noteText') this.noteTypeMsg = "Enter A Quick Note"
+            if (msg === 'audioNote') this.noteTypeMsg = "Upload A mp3 File"
             this.noteType = msg
-        }
+        },
+
+        onAddAudioNote() {
+
+        },
 
         
     },

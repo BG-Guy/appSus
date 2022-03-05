@@ -20,7 +20,8 @@ import { noteService } from "../services/note.service.js";
                   <ul>
                     <li :style="todoStyle(idx)" class="todo space-between" v-for="(todo, idx) in todos" >
                       <div class="left-side-todo align-center">
-                        <input type="checkbox" value="todo.isDone" @input="markTodoAsDone(idx)" >
+                        <i  class="todo-done-btn" ></i>
+                        <input type="checkbox"value="todo.isDone" @input="markTodoAsDone(idx)" >
                         <p contenteditable="true" :class="ifDone(idx)">{{ todo.txt }}</p>
                       </div>
                       <div class="right-side-todo ">
