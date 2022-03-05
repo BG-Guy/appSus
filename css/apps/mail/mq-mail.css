@@ -68,11 +68,6 @@
 
 
 /* SMALL */
-@media (max-width: 650px) {
-    .mail-coulmn {
-        gap: 0;
-    }
-}
 
 @media (max-width: 800px) {
 .mail-app{
