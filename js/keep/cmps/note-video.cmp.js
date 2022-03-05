@@ -4,7 +4,7 @@ export default {
         <section >
             <p class="note-title">{{note.title}}</p>
             
-        <iframe class="video-frame" width="90%" height="90%"
+        <iframe class="video-frame" width="90%" height="70%"
             :src="getVideoUrl">
             </iframe>
         </section>

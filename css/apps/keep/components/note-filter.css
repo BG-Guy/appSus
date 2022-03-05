@@ -1,6 +1,10 @@
 .note-filter {
     width: 90vw;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 }
 
 .note-filter input {
@@ -8,15 +12,24 @@
     
 }
 
+
+
 .filter-btns {
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    width: 100%;
+    padding-top: 1rem;
+    
 }
 
 .filter-btns>* {
     font-weight: 500;
     font-family: ubuntu;
+    
+}
+
+.filter-btns >*:hover {
+    color: #2471A3;
 }
 
 i:hover {

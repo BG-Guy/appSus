@@ -12,6 +12,7 @@
     .note-app-controller {
         display: flex;
         flex-direction: column;
+        width: 90%;
     }
 
     .note-types {

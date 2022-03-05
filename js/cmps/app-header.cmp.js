@@ -6,12 +6,16 @@ export default {
                 <h3>appSus</h3>
             </div>
             <nav class="nav-bar space-around ">
+                <transition 
+                mode="out-in"
+                enter-active-class="animate_animated animate__fadeIn"
+                leave-active-class="animate_animated animate_fadeOut"
+                > 
                 <router-link to="/">Home</router-link>
-                <!-- <router-link to="/notes-app">Apps</router-link> -->
-                <!-- <router-link to="/book-app" >Book App</router-link> -->
+        </transition>
+                
                 <router-link to="/mail-app" >Mail</router-link>
                 <router-link to="/keep-app" >Keep</router-link>
-                <router-link to="/about">About</router-link>
             </nav>
         </header>
     

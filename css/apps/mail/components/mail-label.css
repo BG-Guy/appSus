@@ -34,3 +34,8 @@
 .mail-sent-btn:hover {
     fill: red;
 } 
+
+.add-mail {
+  font-size: 2rem;
+  width: 4rem;
+}

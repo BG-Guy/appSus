@@ -6,7 +6,7 @@ export default {
     props: ['notes'],
     template: `
         <section class="notes-list-container" >
-            <ul class="notes-list wrap ">
+            <ul class="notes-list wrap"  >
                 <li v-for="note in notes" :key="note.id" :style="setBgc(note)" :style="setPin(note)" class="note" >
                     <div class="actions">
                         
@@ -31,7 +31,7 @@ export default {
 
     data() {
         return {
-            
+            windowWidth: null,
         }
     },
 
@@ -75,12 +75,12 @@ export default {
             this.notes.push(newNote)
             noteService.save(newNote)
             console.log(newNote);
-        }
+        },
        
     },
 
     computed: {
-
+        
     },
     
 }

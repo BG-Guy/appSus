@@ -19,7 +19,8 @@
   cursor: pointer;
 }
 .note-details {
-  width: 30vw;
+  width: 50vw;
+  height: 60vh;
   margin: 0 auto;
   border-radius: 0.5rem;
   padding: 0.5rem;
@@ -28,5 +29,7 @@
   margin-bottom: 1rem;
   transition: 0.3s;
 }
-.notes-list-container {
+.note-details-container {
+  height: 70vh;
+  src: url('../../../../logo/appsus-logo.PNG');
 }

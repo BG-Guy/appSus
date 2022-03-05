@@ -1,8 +1,9 @@
 export default {
     props:['notes'],
     template: `
-        <section class="note-filter space-around">
+        <section class="note-filter">
                 <div class="filter-input">
+                    
                     <input type="text"
                         @input="setFilter" 
                         v-model="filterBy" 
@@ -14,6 +15,8 @@ export default {
                     <i class="filter-btn" @click="setFilterBy('noteImg')">Image Note</i>
                     <i class="filter-btn" @click="setFilterBy('noteVideo')">Video Note</i>
                     <i class="filter-btn" @click="setFilterBy('noteText')">Text Note</i>
+                    <i class="filter-btn" @click="setFilterBy('')">All Notes</i>
+                    
 
                 </div>
         </section>
