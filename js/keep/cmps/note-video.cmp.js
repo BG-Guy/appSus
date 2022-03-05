@@ -2,6 +2,7 @@ export default {
     props: ['note'],
     template: `
         <section >
+            {{note.title}}
         <iframe class="video-frame" width="90%" height="90%"
             src="https://www.youtube.com/embed/CJbR7K0E2Z4">
             </iframe>

@@ -55,10 +55,7 @@ export default {
             return {'background-color': note.bgc}
         },
         setPin(note) {
-            if (note.isPinned) return {
-                'order': 1
-            
-            }
+            if (note.isPinned) return {'order': 1}
         },
 
         onSetPin(note) {
@@ -67,14 +64,13 @@ export default {
         },
 
         onDuplicateNote(note) {
-            console.log(note);
             let noteType = note.type
             let bgc = note.bgc
             let info = note.info
             let newNote = noteService.createNote(noteType, bgc, info)
             this.notes.push(newNote)
-            noteService.update(newNote)
-            console.log(this.notes);
+            noteService.save(newNote)
+            console.log(newNote);
         }
        
     },

@@ -17,6 +17,6 @@ export default {
     },
 
     created() {
-        this.txt = this.note.info.txt
+        this.txt = this.note.title
     }
 }

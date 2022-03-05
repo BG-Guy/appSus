@@ -33,6 +33,15 @@ i:hover {
     cursor: pointer;
 }
 
+.filter-btn {
+    font-family: 'Roboto Mono', monospace;
+    font-style: normal;
+    font-weight: bolder;
+    color: black;
+    
+
+}
+
   
 
 
