@@ -33,6 +33,21 @@ i:hover {
     cursor: pointer;
 }
 
+.filter-btn {
+    font-family: 'Roboto Mono', monospace;
+    font-style: normal;
+    font-weight: bolder;
+    color: black;
+    
+
+}
+
+.full-screen {
+    background-image: url('https://www.flaticon.com/free-icons/full-screen');
+    width: 5px;
+    height: 5px;
+}
+
   
 
 

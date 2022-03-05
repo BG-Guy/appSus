@@ -1,8 +1,8 @@
 export default {
     props:['notes'],
     template: `
-        <section class="car-filter">
-                Search
+        <section class="note-filter space-between">
+                
                 <input type="text"
                     @input="setFilter" 
                     v-model="filterBy" 
@@ -28,7 +28,7 @@ export default {
 
     methods: {
         setFilter() {
-            this.$emit('filtered', this.filterBy.slice());
+            this.$emit('filtered', this.filterBy);
             
 
         },

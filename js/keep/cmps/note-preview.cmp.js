@@ -6,7 +6,6 @@ import noteTodos from './note-todos.cmp.js'
 export default {
   props: ['note'],
   template: `
-          {{note.type}}
         <component  :is="note.type" :note="note"></component>
               
               `,

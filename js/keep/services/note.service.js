@@ -63,13 +63,14 @@ if (!notes || notes.length < 1) {
     {
         id: utilService.makeId(),
         type: 'noteTodos',
+        title: 'Get my stuff from work',
         bgc: '#F2F3F4',
         isPinned: false,
         info: {
             label: "Enter A Todo",
             todos: [
             {
-                txt: 'Work Hard Play Hard',
+                txt: 'USB flashdrive',
                 isDone: false,
                 color: '#F2F3F4',
                 importance: 4,
@@ -88,6 +89,7 @@ if (!notes || notes.length < 1) {
     {
         id: utilService.makeId(),
         type: 'noteText',
+        title: 'Funny joke',
         bgc: '#F2F3F4',
         isPinned: false,
         info: {
@@ -100,23 +102,30 @@ if (!notes || notes.length < 1) {
     {
         id: utilService.makeId(),
         type: 'noteTodos',
+        title: 'My Shopping list',
         bgc: '#F2F3F4',
         isPinned: false,
         info: {
             label: "Enter A Todo",
             todos: [
             {
-                txt: 'Work Hard Play Hard',
+                txt: 'Flafel',
                 isDone: false,
                 color: '#F2F3F4',
                 importance: 4,
             },
             {
-                txt: 'Work Hard Play Hard',
+                txt: 'Hummus',
                 isDone: false,
                 color: '#F2F3F4',
                 importance: 4,
             },
+            {
+            txt: 'Milk',
+            isDone: false,
+            color: '#F2F3F4',
+            importance: 4,
+            }
         ],
     },
  
@@ -125,11 +134,11 @@ if (!notes || notes.length < 1) {
     {
         id: utilService.makeId(),
         type: 'noteImg',
+        title: 'Bobi and Me',
         bgc: '#F2F3F4',
         isPinned: false,
         info: {
             url: "http://some-img/me",
-            txt: "Bobi and Me",
         
     },
  
@@ -138,6 +147,7 @@ if (!notes || notes.length < 1) {
     {
         id: utilService.makeId(),
         type: 'noteVideo',
+        title: 'Awesome Jam',
         bgc: '#F2F3F4',
         isPinned: false,
         info: {
@@ -151,19 +161,20 @@ if (!notes || notes.length < 1) {
     {
         id: utilService.makeId(),
         type: 'noteTodos',
+        title: 'Wish List',
         bgc: '#F2F3F4',
         isPinned: false,
         info: {
             label: "Enter A Todo",
             todos: [
             {
-                txt: 'Work Hard Play Hard',
+                txt: 'A Pet Tiger',
                 isDone: false,
                 color: '#F2F3F4',
                 importance: 4,
             },
             {
-                txt: 'Work Hard Play Hard',
+                txt: 'A Pet Lion',
                 isDone: false,
                 color: '#F2F3F4',
                 importance: 4,

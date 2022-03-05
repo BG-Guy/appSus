@@ -88,7 +88,9 @@ export default {
       this.mails.splice(idx,1)
       },
 
-    
+      
+      
+
    
     },
   computed: {
@@ -97,7 +99,7 @@ export default {
        (!mail.sent) && (!mail.isDraft) )
       else if(this.mode && !this.filterBy ) return this.mails
       const regex = new RegExp(this.filterBy, "i");
-      return this.mails.filter((mail) => regex.test(mail.body) || regex.test(mail.name));
+     return this.mails.filter((mail) => regex.test(mail.body) || regex.test(mail.name));
     },
 
     getCount() {
@@ -117,4 +119,5 @@ export default {
    
    
   },
+
 };

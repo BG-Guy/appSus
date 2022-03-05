@@ -5,6 +5,17 @@
     height: 2rem;
 }
 
+.note-title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    margin: 1rem 0 1rem 0;
+    font-size: 1.2rem;
+}
+
 .add-btn {
     background-color: #AEB6BF;
     border-width: 0px;
@@ -35,11 +46,12 @@
     margin-bottom: .5rem;
     background-color: #F2F3F4;
     height: 2rem;
+    flex-wrap:wrap;
 
 }
 
 .todo-input input {
-    width: 100%;
+    width: 50%;
     margin: 0;
     padding: 0;
     border: 0px;

@@ -55,11 +55,11 @@ export default {
                 console.error(err);
                 showErrorMsg('Error - please try again later')
             });
+          
     },
 
     setTypeFilter(type) {
         this.filterByType = type
-        console.log(this.filterBy);
     },
 
     setFilter(type) {
@@ -70,13 +70,12 @@ export default {
     },
     computed:{
         noteForDisplay() {
-            if (!this.filterBy && !this.filterByType) return this.notes
-            let res = this.notes.filter((note) => note.type === this.filterByType)
-            if (res && !this.filterBy) return res
             const regex = new RegExp(this.filterBy, "i");
-            return this.notes.filter((note) => regex.test(note.info.txt))
-            
+            if (!this.filterBy && !this.filterByType) return this.notes
+            if (this.filterBy ) return this.notes.filter((note) => regex.test(note.title))
+            if (this.filterByType ) return this.notes.filter((note) => note.type === this.filterByType)
+        
+    }
+}
 
-        }
-    },
 }
