@@ -9,7 +9,7 @@ export default {
 <!-- <router-link :to="'/mail-app/'+mail.id"> -->  
      <TransitionGroup name="list"  tag="ul" class="mail-list">  
         <li v-for="mail in mails" :key="mail.id" > 
-                <mail-preview :mail="mail"  @remove="removeMail"  @unRemove="unRemoveMail" /> 
+                <mail-preview :mail="mail"  @remove="removeMail" @read="setCount"  @unRemove="unRemoveMail" /> 
             </li>
      </TransitionGroup>
 
@@ -35,6 +35,9 @@ export default {
             this.$emit('unRemove', id)
 
         },
+        setCount(){
+            this.$emit('read')
+        }
     },
     computed: {
     },

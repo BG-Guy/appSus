@@ -4,13 +4,13 @@ import { mailService } from '../services/mail-service.js';
 export default {
     props:['mail'],
     template: `
-<section :class='isRead' class="mail-coulmn flex" @click="setRead">
+<section :class='isRead' class="mail-coulmn flex">
     <input class="star" type="checkbox" @click="setImportent" :checked='!mail.importent'>
     <router-link :to="'/mail-app/details/'+mail.id">
-  <div class="mail-prew flex space-between">
+  <div class="mail-prew flex space-between"  @click="setRead">
       <span> {{mail.name}} </span>
       <span>  {{mail.subject}}</span>
-      <span>{{ mail.body}}</span>
+      <p>{{mail.body}}</p>
       <span> {{mail.sentAt}}</span>
       <span> {{mail.addressee}}</span>
     </div>
@@ -47,12 +47,12 @@ export default {
         },
         setImportent(){
             this.mail.importent =  !this.mail.importent
-            this.mail.isRead= !this.mail.isRead
             mailService.save(this.mail)
         },
         setRead(){
             this.mail.isRead= true
             mailService.save(this.mail)
+            this.$emit('read')
         },
     },
     computed: {
@@ -63,7 +63,7 @@ export default {
         checkMailStatus(){
             if(this.mail.isDeleted) return;
             return (this.mail.isRead) ? '✉': '📧'
-        }
+        },
 
     },
 };

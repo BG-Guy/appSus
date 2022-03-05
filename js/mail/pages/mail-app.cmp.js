@@ -16,7 +16,7 @@ export default {
           <div class="count" :style="setBarStyle">{{getCount}}</div>
 
         </div>
-    <mail-list :mails="mailsForDisplay"  @remove="removeMail"  @unRemove="unRemoveMail" />
+    <mail-list :mails="mailsForDisplay" @read="setCount" @remove="removeMail"  @unRemove="unRemoveMail" />
     </section>
   </div>   
     `,
@@ -67,10 +67,11 @@ export default {
      removeMail(id) {
     const idx = this.mails.findIndex((mail) => mail.id === id);
       if(this.mails[idx].isDeleted) {
+        mailService.remove(id)
       } else{
           this.mails[idx].isDeleted = true
          mailService.save(this.mails[idx])
-           this.mails.splice(idx,1)
+          //  this.mails.splice(idx,1)
       }
     },
       // eventBus.emit('show-msg', { txt: 'Deleted succesfully', type: 'success' });
@@ -82,20 +83,8 @@ export default {
        mailService.save(this.mails[idx]);
       this.mails= mailService.query()
       },
-      setCount(){
-        this.unreadMails= this.mails.filter((mail) => !mail.isRead)
-        console.log( this.unreadMails.length);
-        console.log(this.mails.length)
-         this.count = mailService.percentage(this.unreadMails.length, this.mails.length).toFixed(0).toString() + '%'
-         console.log(this.count);
-      },
 
-      setBarStyle() {
-
-        return {
-          'width': this.count,
-        }
-      }
+     
 
 
 
@@ -115,6 +104,16 @@ export default {
 
     getCount() {
       return this.count
+    },
+    setCount(){
+      this.unreadMails= this.mails.filter((mail) => !mail.isRead)
+       this.count = mailService.percentage(this.unreadMails.length, this.mails.length).toFixed(0).toString() + '%'
+    },
+    setBarStyle() {
+
+      return {
+        'width': this.count,
+      }
     }
 
    

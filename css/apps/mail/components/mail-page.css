@@ -42,7 +42,8 @@ button::after{
 
 .count {
   height: 100%;
-  background-color: #439B13;
+  background-color: #fc3d3dcc;
   color: white;
+  text-align: center;
 }
   

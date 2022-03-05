@@ -6,6 +6,7 @@
     margin-bottom: 1rem;
     gap:1rem; 
     flex-direction: row;
+    font-size: 1rem;
   }
   .mail-status{
    font-size: 1.5rem;
@@ -78,6 +79,4 @@
     cursor: pointer;
     background-color:  inherit;
   }
-   .mail-prew span{
-    flex-grow:1;
-  } 
+  
