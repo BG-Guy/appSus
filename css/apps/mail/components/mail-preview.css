@@ -79,4 +79,11 @@
     cursor: pointer;
     background-color:  inherit;
   }
-  
+  .mail-list-prev{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:block;
+    width : 20%
+
+  }

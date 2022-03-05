@@ -3,8 +3,8 @@ import { mailService } from "../services/mail-service.js";
 import mailFilter from "../cmps/mail-filter.cmp.js";
 import mailLabel from "../cmps/mail-label.cmp.js";
 import mailEdit from "./mail-edit.cmp.js";
+import { showErrorMsg, showSuccessMsg } from '../../services/eventBus-service.js';
 
-// import { eventBus } from '../services/eventBus-service.js';
 
 export default {
   template: `
@@ -68,22 +68,24 @@ export default {
     const idx = this.mails.findIndex((mail) => mail.id === id);
       if(this.mails[idx].isDeleted) {
         mailService.remove(id)
+        showSuccessMsg('Deleted succesfully');
         return this.mails.splice(idx,1)
       } else{
         console.log('hi');
           this.mails[idx].isDeleted = true
          mailService.save(this.mails[idx])
             this.mails.splice(idx,1)
+            showSuccessMsg('Deleted succesfully');
       }
     },
-      // eventBus.emit('show-msg', { txt: 'Deleted succesfully', type: 'success' });
     
 
      unRemoveMail(id) {
       const idx = this.mails.findIndex((mail) => mail.id === id);
       this.mails[idx].isDeleted = !this.mails[idx].isDeleted;
        mailService.save(this.mails[idx]);
-      this.mails= mailService.query()
+      // this.mails= mailService.query()
+      this.mails.splice(idx,1)
       },
 
     

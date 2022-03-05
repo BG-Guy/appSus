@@ -10,7 +10,7 @@ export default {
   <div class="mail-prew flex space-between"  @click="setRead">
       <span> {{mail.name}} </span>
       <span>  {{mail.subject}}</span>
-      <p>{{mail.body}}</p>
+      <span class="mail-list-prev">{{mail.body}}</span>
       <span> {{mail.sentAt}}</span>
       <span> {{mail.addressee}}</span>
     </div>

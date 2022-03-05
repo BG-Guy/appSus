@@ -1,7 +1,8 @@
 import { router } from '../../router.js';
 import mailLabel from '../cmps/mail-label.cmp.js';
 import { mailService } from '../services/mail-service.js';
-import { eventBus } from '../../services/eventBus-service.js';
+import { showErrorMsg, showSuccessMsg } from '../../services/eventBus-service.js';
+
 
 
 export default {
@@ -55,14 +56,18 @@ export default {
         send(){
             let newMail=mailService.getEmptyMail(this.mail)
             newMail.sent = true
+            newMail.isRead = true
+
                 mailService.save(newMail)
                 router.push('/mail-app')
+                showSuccessMsg('Mail Send');
         },
         draft(){
             let newMail=mailService.getEmptyMail(this.mail)
             newMail.isDraft = true
                 mailService.save(newMail)
                 router.push('/mail-app')
+                showSuccessMsg('Saved To Drafts');
 
         },
     },
