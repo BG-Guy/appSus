@@ -9,7 +9,7 @@ export default {
             <ul class="notes-list wrap space-around ">
                 <li v-for="note in notes" :key="note.id" :style="setBgc(note)" :style="setPin(note)" class="note" >
                     <div class="actions">
-                            <router-link :to="'/keep-app/'+note.id">Enter Full Screen</router-link>
+                            <router-link :to="'/keep-app/'+note.id" class="full-screen">Enter Full Screen</router-link>
                            <i class="close-btn" @click="remove(note.id)">☒</i>
                            <i class="color-btn yellow" @click="onSetBgc(note, '#F7DC6F')"></i>
                            <i class="color-btn red" @click="onSetBgc(note, '#E74C3C')" ></i>

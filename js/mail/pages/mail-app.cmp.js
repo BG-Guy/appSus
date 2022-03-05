@@ -88,13 +88,9 @@ export default {
       this.mails.splice(idx,1)
       },
 
-<<<<<<< HEAD
       
       
 
-=======
-    
->>>>>>> 1ff0f3e2cc85d631fc0dcb49006b75771206543f
    
     },
   computed: {

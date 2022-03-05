@@ -1,7 +1,7 @@
 export default {
     props:['notes'],
     template: `
-        <section class="note-filter">
+        <section class="note-filter space-between">
                 
                 <input type="text"
                     @input="setFilter" 

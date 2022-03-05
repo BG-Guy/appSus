@@ -12,6 +12,8 @@
     justify-content: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 700;
+    margin: 1rem 0 1rem 0;
+    font-size: 1.2rem;
 }
 
 .add-btn {
@@ -43,7 +45,7 @@
     width: 100%;
     margin-bottom: .5rem;
     background-color: #F2F3F4;
-    height: 4rem;
+    height: 2rem;
     flex-wrap:wrap;
 
 }

@@ -16,6 +16,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Shippori+Antique+B1&display=swap');
 
 @import './components/notes-list.css';
+@import './components/note-filter.css';
 @import './components/todo-list.css';
 
 @import './components/note-details.css';

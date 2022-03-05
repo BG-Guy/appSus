@@ -5,8 +5,8 @@ import { noteService } from "../services/note.service.js";
     template: `
           <section >
               <label>
+                <p class="note-title">{{note.title}}</p>
                 <div class="todo-input space-around">
-                  <p class="note-title">{{note.title}}</p>
                   <input :placeholder="note.info.label" type="text" v-model="val"/>
                   <div class="importance-btn space-between">
                     <i @click="setImportance(1)" class="importance high" ></i>
