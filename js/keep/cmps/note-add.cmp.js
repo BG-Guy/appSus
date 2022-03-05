@@ -14,16 +14,18 @@ export default {
             </div>
             <input type="text" v-model="txt" :placeholder="noteTypeMsg" >
             <button @click="addNote()" >Add Note</button>
-        </section>
-        `,
+         
+            </span>
+    </section>
 
-    data() {
+`,
+
+data() {
         return {
             noteTypeMsg: 'Select Note Type',
             note: null,
             txt: null,
             noteType: null,
-
 
         }
 
@@ -32,15 +34,12 @@ export default {
     methods: {
         addNote() {
             var info
-            console.log(this.noteType, this.txt);
+            // console.log(this.noteType, this.txt);
             if (!this.noteType || !this.txt) return
             if (this.noteType === 'noteTodos') info = {label: "Enter A Todo", todos: [{txt: this.txt, isDone: false}], color: 'black'}
             if (this.noteType === 'noteImg') info = {url: this.txt, title: 'My Img'}
             if (this.noteType === 'noteVideo') info = {url: this.txt}
             if (this.noteType === 'noteText') info = {txt: this.txt, label: "Enter A Quick Note", color: 'black'}
-            if (this.noteType === 'audioNote') info = {src: null , title: 'My Audio'}
-            console.log(info);
-
             this.note = noteService.createNote(this.noteType, 'lightblue', info)
             this.$emit('addNote', this.note)
         },
@@ -51,12 +50,8 @@ export default {
             if (msg === 'noteImg')  this.noteTypeMsg = 'Insert Img URL'
             if (msg === 'noteVideo')  this.noteTypeMsg = 'Insert YouTube URL'
             if (msg === 'noteText') this.noteTypeMsg = "Enter A Quick Note"
-            if (msg === 'audioNote') this.noteTypeMsg = "Upload A mp3 File"
             this.noteType = msg
-        },
-
-        onAddAudioNote() {
-
+            
         },
 
         
