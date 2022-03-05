@@ -9,6 +9,8 @@ export default {
                 <button @click="selectNoteType('noteText')">Text Note</button>
                 <button @click="selectNoteType('noteImg')">Img Note</button>
                 <button @click="selectNoteType('noteVideo')">Video Note</button>
+                <button @click="selectNoteType('noteAudio')">Audio Note</button>
+
             </div>
             <input type="text" v-model="txt" :placeholder="noteTypeMsg" >
             <button @click="addNote()" >Add Note</button>
@@ -36,6 +38,7 @@ export default {
             if (this.noteType === 'noteImg') info = {url: this.txt, title: 'My Img'}
             if (this.noteType === 'noteVideo') info = {url: this.txt}
             if (this.noteType === 'noteText') info = {txt: this.txt, label: "Enter A Quick Note", color: 'black'}
+            if (this.noteType === 'audioNote') info = {src: null , title: 'My Audio'}
             console.log(info);
 
             this.note = noteService.createNote(this.noteType, 'lightblue', info)
