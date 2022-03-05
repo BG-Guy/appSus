@@ -39,17 +39,18 @@ data() {
             var info
             // console.log(this.noteType, this.txt);
             if (!this.noteType || !this.txt) return
-            if (this.noteType === 'noteTodos') info = {label: "Enter A Todo", todos: [{txt: this.txt, isDone: false}], color: 'black'}
-            if (this.noteType === 'noteImg') info = {url: this.txt, title: 'My Img'}
+            if (this.noteType === 'noteTodos') info = {todos: [{txt: this.txt, isDone: false, importance: 4}], color: 'black'}
+            if (this.noteType === 'noteImg') info = {url: this.txt}
             if (this.noteType === 'noteVideo') info = {url: this.txt}
             if (this.noteType === 'noteText') info = {txt: this.txt}
-            this.note = noteService.createNote(this.noteType,this.txt, 'lightblue', info)
+
+            this.note = noteService.createNote(this.noteType,this.txt, 'F2F3F4', info)
             this.$emit('addNote', this.note)
         },
 
         selectNoteType(msg) {
             
-            if (msg === 'noteTodos')  this.noteTypeMsg = 'Enter A Quick Todo'
+            if (msg === 'noteTodos')  this.noteTypeMsg = 'Enter Todos Title'
             if (msg === 'noteImg')  this.noteTypeMsg = 'Insert Img URL'
             if (msg === 'noteVideo')  this.noteTypeMsg = 'Insert YouTube URL'
             if (msg === 'noteText') this.noteTypeMsg = "Enter A Quick Note"
@@ -60,9 +61,7 @@ data() {
         
     },
     computed: {
-        getNoteInfo() {
-
-        }
+        
     },
 
     components: {

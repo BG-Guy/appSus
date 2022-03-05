@@ -7,7 +7,7 @@ import { noteService } from "../services/note.service.js";
               <label>
                 <p class="note-title">{{note.title}}</p>
                 <div class="todo-input space-around">
-                  <input :placeholder="note.info.label" type="text" v-model="val"/>
+                  <input type="text" v-model="val"/>
                   <div class="importance-btn space-between">
                     <i @click="setImportance(1)" class="importance high" ></i>
                     <i @click="setImportance(2)" class="importance medium" ></i>
@@ -67,7 +67,7 @@ import { noteService } from "../services/note.service.js";
           importance: this.importance
       })
       this.val = ''
-          this.updateNote()
+          this.updateTodos()
           noteService.update(this.note)
           console.log(this.note);
           
@@ -83,13 +83,13 @@ import { noteService } from "../services/note.service.js";
 
       deleteTodo(idx) {
         this.todos = this.todos.splice((idx, 1))
-        this.updateNote()
+        this.updateTodos()
         noteService.update(this.note)
       },
 
       markTodoAsDone(idx) {
         this.todos[idx].isDone = !this.todos[idx].isDone
-        this.updateNote()
+        this.updateTodos()
         
       },
       ifDone(idx) {
@@ -97,7 +97,7 @@ import { noteService } from "../services/note.service.js";
 
       },
 
-      updateNote() {
+      updateTodos() {
         this.note.info.todos = this.todos
       },
 
@@ -120,7 +120,6 @@ import { noteService } from "../services/note.service.js";
         if (sortBy === 'decending') this.todos.sort((a,b) => {
           return b.importance - a.importance
         })
-        console.log(this.todos);
       }
 
     },

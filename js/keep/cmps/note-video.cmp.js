@@ -5,7 +5,7 @@ export default {
             <p class="note-title">{{note.title}}</p>
             
         <iframe class="video-frame" width="90%" height="90%"
-            src="https://www.youtube.com/embed/CJbR7K0E2Z4">
+            :src="getVideoUrl">
             </iframe>
         </section>
     `,
@@ -21,6 +21,10 @@ export default {
     },
 
     methods: {},
-    computed: {},
+    computed: {
+        getVideoUrl() {
+            return 'https://www.youtube.com/embed/' + this.note.info.url.split('=')[1]
+        }
+    },
     
 }

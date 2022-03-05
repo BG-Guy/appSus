@@ -42,8 +42,9 @@ function update(note) {
 
 
 function createNote(noteType,title, bgc, info) {
-    
-    let note = {
+    if (noteType === 'noteImg') title = 'Cool Image'
+    if (noteType === 'noteVideo') title = 'Cool Video'
+    return {
         id: utilService.makeId(),
         type: noteType,
         bgc: bgc,
@@ -51,8 +52,6 @@ function createNote(noteType,title, bgc, info) {
         info: info,
         title: title,
     }
-    return note
-    
 }
 
 function _createNotes() {
@@ -139,7 +138,7 @@ if (!notes || notes.length < 1) {
         bgc: '#F2F3F4',
         isPinned: false,
         info: {
-            url: "http://some-img/me",
+            url: "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
         
     },
  

@@ -70,7 +70,8 @@ export default {
             let noteType = note.type
             let bgc = note.bgc
             let info = note.info
-            let newNote = noteService.createNote(noteType, bgc, info)
+            let title = note.title
+            let newNote = noteService.createNote(noteType,title, bgc, info)
             this.notes.push(newNote)
             noteService.save(newNote)
             console.log(newNote);
