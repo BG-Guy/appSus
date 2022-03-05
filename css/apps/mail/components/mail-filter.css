@@ -1,6 +1,7 @@
 .search-filter{
-    margin: 0 auto;
-    width: 80vw;
+    margin: 1rem;
+    width: 100%;
+
     
 }
 .search-filter input{

@@ -8,16 +8,16 @@ import { showErrorMsg, showSuccessMsg } from '../../services/eventBus-service.js
 
 export default {
   template: `
-    <div class ="mail-main-app main-layout">
+    <div class ="mail-main-app column align-center">
          <mail-filter @filtered="setFilter" />  
-    <section class="mail-app app-main">
-        <mail-label @choose="setChoose" /> 
-        <div class="mail-bar">
-          <div class="count" :style="setBarStyle">{{getCount}}</div>
-
-        </div>
-    <mail-list :mails="mailsForDisplay" @read="setCount" @remove="removeMail"  @unRemove="unRemoveMail" />
-    </section>
+         <section class="mail-list-container">
+           <mail-label @choose="setChoose" /> 
+           <mail-list :mails="mailsForDisplay" @read="setCount" @remove="removeMail"  @unRemove="unRemoveMail" />
+          </section>
+          <div class="mail-bar ">
+            <div class="count align-center " :style="setBarStyle">{{getCount}}</div>
+    
+          </div>
   </div>   
     `,
 

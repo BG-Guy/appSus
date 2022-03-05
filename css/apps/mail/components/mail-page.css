@@ -1,35 +1,17 @@
 .mail-main-app{
- display: grid;
- grid-template-columns: repeat(5, 1fr);;
-}
-.search-filter{
-   grid-area: 1 / 2 / 2 / 6; 
-  }
-  .mail-app{
-    grid-area: 2 / 1 / 6 / 6;
-  }
-
-
- .mail-app{
- width: 80%;
- padding: 2rem;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-} 
-
-
-.mail-filter{
-   grid-area: 1 / 1 / 6 / 2; 
-  }
-.mail-list { 
-  grid-area: 1 / 2 / 6 / 6; 
-
+ display: flex;
+ height: 70vh;
+ width: 80vw;
+ margin: auto;
+ 
 }
 
-ul{
-  list-style: none;
-}
+  .mail-list-container {
+    display: flex;
+
+  }
+
+
 button::after{
   border: none;
 }
@@ -44,6 +26,5 @@ button::after{
   height: 100%;
   background-color: #fc3d3dcc;
   color: white;
-  text-align: center;
 }
   
