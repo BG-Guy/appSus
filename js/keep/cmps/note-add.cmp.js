@@ -5,17 +5,18 @@ export default {
     template: `
         <section class="note-add column" >
             <div class="note-types align-center" >
-                <svg class="todos-note icon" @click="selectNoteType('noteTodos')">Todos Note</svg>
-                <svg class="text-note icon" @click="selectNoteType('noteText')">Text Note</svg>
-                <svg class="img-note icon" @click="selectNoteType('noteImg')">Img Note</svg>
-                <svg class="video-note icon" @click="selectNoteType('noteVideo')">Video Note</svg>
-                <svg class="audio-note icon" @click="selectNoteType('noteAudio')">Audio Note</svg>
+                <button class="todos-note icon" @click="selectNoteType('noteTodos')">Todos Note</button>
+                <button class="text-note icon" @click="selectNoteType('noteText')">Text Note</button>
+                <button class="img-note icon" @click="selectNoteType('noteImg')">Img Note</button>
+                <button class="video-note icon" @click="selectNoteType('noteVideo')">Video Note</button>
+                <button class="audio-note icon" @click="selectNoteType('noteAudio')">Audio Note</button>
 
             </div>
             <div class="add-note-inputfield align-center">
                 <input type="text" v-model="txt" :placeholder="noteTypeMsg" >
-                <svg class="add-note icon" @click="addNote()" >Add Note</svg>
-
+                <button class="add-note icon" @click="addNote()" >Add Note</button>
+                
+                
             </div>
          
 

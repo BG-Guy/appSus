@@ -1,17 +1,21 @@
 export default {
     props:['notes'],
     template: `
-        <section class="note-filter space-between">
-                
-                <input type="text"
-                    @input="setFilter" 
-                    v-model="filterBy" 
-                    placeholder="Search">
+        <section class="note-filter space-around">
+                <div class="filter-input">
+                    <input type="text"
+                        @input="setFilter" 
+                        v-model="filterBy" 
+                        placeholder="Search">
 
-                <i class="filter-btn" @click="setFilterBy('noteTodos')">Todos Note</i>
-                <i class="filter-btn" @click="setFilterBy('noteImg')">Image Note</i>
-                <i class="filter-btn" @click="setFilterBy('noteVideo')">Video Note</i>
-                <i class="filter-btn" @click="setFilterBy('noteText')">Text Note</i>
+                </div>
+                <div class="filter-btns">
+                    <i class="filter-btn" @click="setFilterBy('noteTodos')">Todos Note</i>
+                    <i class="filter-btn" @click="setFilterBy('noteImg')">Image Note</i>
+                    <i class="filter-btn" @click="setFilterBy('noteVideo')">Video Note</i>
+                    <i class="filter-btn" @click="setFilterBy('noteText')">Text Note</i>
+
+                </div>
         </section>
     `,
 

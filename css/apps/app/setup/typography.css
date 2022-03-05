@@ -1,4 +1,14 @@
-/* @font-face {
+@font-face {
     font-family: play;
-    src: url(/Fonts/Playfair/PlayfairDisplay-Regular.ttf);
-} */
+    src: url(/fonts/Playfair/PlayfairDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: inconsolata;
+    src: url(/fonts/Inconsolata/Inconsolata-Regular.ttf);
+}
+
+@font-face {
+    font-family: ubuntu;
+    src: url(/fonts/ubuntu/Ubuntu-Bold.ttf);
+}

@@ -17,36 +17,30 @@
 
 
 .todos-note{
-    background: url('../../../../icons/todo-list-icon.svg');
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 2rem;
+    width: 4rem;
     
 }
 .text-note{
-    background: url('../../../../icons/edit-pencil-icon.svg');
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 2rem;
+    width: 4rem;
 }
 .img-note{
-    background: url('../../../../icons/img-icon.svg');
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 2rem;
+    width: 4rem;
 }
 .video-note{
-    background: url('../../../../icons/youtube-icon.svg');
     height: 2rem;
-    width: 2rem;
+    width: 4rem;
 }
 .audio-note{
-    background: url('../../../../icons/audio-icon.svg');
-    height: 1.1rem;
-    width: 1rem;
+    height: 2rem;
+    width: 4rem;
 }
 
 .add-note {
-    background: url('../../../../icons/add-plux-icon.svg');
-    width: 2.2rem;
-    height: 2.2rem;
+    height: 2rem;
+    width: 4rem;
 }
 
 

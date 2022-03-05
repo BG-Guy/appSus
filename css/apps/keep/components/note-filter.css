@@ -7,3 +7,18 @@
     height: 2rem;
     
 }
+
+.filter-btns {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.filter-btns>* {
+    font-weight: 500;
+    font-family: ubuntu;
+}
+
+i:hover {
+    cursor: pointer;
+}
