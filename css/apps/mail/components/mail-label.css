@@ -7,7 +7,6 @@
 .filter button:hover{
     color: rgb(182, 24, 24);
    background-color: var(--clrRed);
-   font-weight: bold;
    cursor: pointer;
 }
  .filter{
@@ -25,3 +24,13 @@
     gap:2rem;
     font-size: 1rem;
   }
+
+  .mail-sent-btn {
+    background: url('../../../../icons/sent-mail-icon.svg');
+    height: 2rem;
+    width: 2rem;
+  }
+
+.mail-sent-btn:hover {
+    fill: red;
+} 

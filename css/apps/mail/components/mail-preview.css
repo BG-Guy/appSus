@@ -61,17 +61,28 @@
    position: relative;
    bottom: 0.7rem;
   }
-  .trash{
-   font-size: 1.5rem;
-   border: none;
-   cursor: pointer;
-   background-color:  inherit;
+  .trash-btn{
+    background: url('../../../../icons/trash-icon.svg');
+    height: 1.5rem;
+    width: 1.5rem;
+    
   }
+
+
+
   .trash:hover{
    font-weight: bold;
   }
+
+  .btn-delte {
+    background: url('../../../../icons/undo-icon.svg');
+    height: 1rem;
+    width: 1rem;
+  }
+
   .btn-delte:hover{
    font-weight: bold;
+   cursor: pointer;
   }
   .btn-delte{
     font-size: 1.5rem;
@@ -86,4 +97,8 @@
     display:block;
     width : 20%
 
+  }
+
+  .mail-list {
+    margin: auto;
   }

@@ -1,11 +1,9 @@
 
 export default {
     template: `
-       <div class="side-bar">
+       <div class="side-bar align-center ">
        <router-link to="/mail-app/edit" >
-            <label class= "send">
-            📤
-            </label>
+            <svg class= "mail-sent-btn"></svg>
             </router-link>
         <section class="filter">
             <button @click="setFilter('inbox')"> inbox </button>

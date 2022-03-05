@@ -17,14 +17,10 @@ export default {
 </router-link>
     
    <section class="mail-actions flex">
-       <label>
-       <button type="button" v-if="mail.isDeleted" @click="unRemoveMail(mail.id)"
-        class="btn-delte"> ⤴</button>
-   </label>
+       <svg v-if="mail.isDeleted" @click="unRemoveMail(mail.id)"
+        class="btn-delte"> ⤴</svg>
        <span class="mail-status" v-if="!mail.isDeleted"> {{checkMailStatus}}</span>
-       <label>
-       <button type="button" @click="removeMail(mail.id)"  class="trash">🗑 </button>
-    </label>  
+       <svg @click="removeMail(mail.id)"  class="trash-btn"></svg>
    </section>
 
 </section>
