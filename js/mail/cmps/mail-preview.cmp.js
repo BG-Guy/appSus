@@ -58,7 +58,7 @@ export default {
         },
         checkMailStatus(){
             if(this.mail.isDeleted) return;
-            return (this.mail.isRead) ? '✉': '📧'
+            return (this.mail.isRead) ? '📨': '📧'
         },
 
     },

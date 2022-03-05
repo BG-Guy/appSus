@@ -1,0 +1,55 @@
+
+.note-add {
+    width: 20vw;
+
+    margin-inline-start: 3.5rem;
+    margin-top: 1rem;
+}
+
+.add-note-inputfield input{
+    flex: 1;
+    height: 2rem;
+}
+
+.note-types>* {
+    margin-inline-end: auto;
+}
+
+
+.todos-note{
+    background: url('../../../../icons/todo-list-icon.svg');
+    height: 1.5rem;
+    width: 1.5rem;
+    
+}
+.text-note{
+    background: url('../../../../icons/edit-pencil-icon.svg');
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.img-note{
+    background: url('../../../../icons/img-icon.svg');
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.video-note{
+    background: url('../../../../icons/youtube-icon.svg');
+    height: 2rem;
+    width: 2rem;
+}
+.audio-note{
+    background: url('../../../../icons/audio-icon.svg');
+    height: 1.1rem;
+    width: 1rem;
+}
+
+.add-note {
+    background: url('../../../../icons/add-plux-icon.svg');
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+
+
+
+

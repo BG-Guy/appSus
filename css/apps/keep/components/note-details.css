@@ -8,7 +8,11 @@
 
 .actions {
   display: flex;
-  justify-content: space-between;
+  margin-inline-end: 1rem;
+}
+
+.actions >* {
+  margin-inline-end: 1rem;
 }
 
 .close-btn:hover {
@@ -25,5 +29,4 @@
   transition: 0.3s;
 }
 .notes-list-container {
-height: 70vh;
 }

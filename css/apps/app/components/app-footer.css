@@ -1,4 +1,8 @@
 .app-footer {
     height: 15vh;
-    
+    background-color: var(--sec-clr);
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex; 
+    bottom: 0px;
 }

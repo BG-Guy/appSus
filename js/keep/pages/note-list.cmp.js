@@ -6,7 +6,7 @@ export default {
     props: ['notes'],
     template: `
         <section class="notes-list-container" >
-            <ul class="notes-list wrap space-around ">
+            <ul class="notes-list wrap ">
                 <li v-for="note in notes" :key="note.id" :style="setBgc(note)" :style="setPin(note)" class="note" >
                     <div class="actions">
                         

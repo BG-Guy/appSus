@@ -41,14 +41,15 @@ function update(note) {
 }
 
 
-function createNote(noteType, bgc, info) {
+function createNote(noteType,title, bgc, info) {
     
     let note = {
         id: utilService.makeId(),
         type: noteType,
         bgc: bgc,
         isPinned: false,
-        info: info
+        info: info,
+        title: title,
     }
     return note
     
@@ -94,7 +95,7 @@ if (!notes || notes.length < 1) {
         isPinned: false,
         info: {
             txt: "Fullstack Me Baby!",
-            color: 'red'
+
         },
         
     },
@@ -106,7 +107,7 @@ if (!notes || notes.length < 1) {
         bgc: '#F2F3F4',
         isPinned: false,
         info: {
-            label: "Enter A Todo",
+
             todos: [
             {
                 txt: 'Flafel',
@@ -151,7 +152,7 @@ if (!notes || notes.length < 1) {
         bgc: '#F2F3F4',
         isPinned: false,
         info: {
-            label: "Enter A Todo",
+
             url: "https://www.youtube.com/watch?v=CJbR7K0E2Z4",
         
     },
@@ -165,7 +166,7 @@ if (!notes || notes.length < 1) {
         bgc: '#F2F3F4',
         isPinned: false,
         info: {
-            label: "Enter A Todo",
+
             todos: [
             {
                 txt: 'A Pet Tiger',

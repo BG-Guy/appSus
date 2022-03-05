@@ -2,3 +2,8 @@
     width: 90vw;
     margin: auto;
 }
+
+.note-filter input {
+    height: 2rem;
+    
+}

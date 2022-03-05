@@ -2,12 +2,14 @@ export default {
     props: ["note"],
     template: `
         <section   >
-            <p contenteditable="true" >{{ txt }}</p>
+            <p class="note-title" contenteditable="true" >{{ title }}</p>
+            <p>{{ txt }}</p>
         </section>
     `,
 
     data() {
         return {
+            title: null,
             txt: null,
         }
     },
@@ -17,6 +19,7 @@ export default {
     },
 
     created() {
-        this.txt = this.note.title
+        this.txt = this.note.info.txt
+        this.title = this.note.title
     }
 }

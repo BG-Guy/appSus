@@ -18,6 +18,9 @@
 @import './components/notes-list.css';
 @import './components/note-filter.css';
 @import './components/todo-list.css';
+@import './components/note-add.css';
+@import './components/note-app-controller.css';
 
 @import './components/note-details.css';
+@import './mq-keep.css'
 /* @import 'components/screen.css'; */

@@ -1,0 +1,23 @@
+
+
+
+
+/* SMALL */
+@media (max-width: 650px) {
+    
+}
+
+/* MEDIUM */
+
+@media (max-width: 1000px) {
+    .notes-list {
+        flex-direction: row;
+        height: auto;
+        
+    }
+
+}
+
+
+/* MEDIUM */
+

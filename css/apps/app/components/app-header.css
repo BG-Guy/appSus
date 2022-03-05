@@ -1,13 +1,23 @@
 .app-header {
     width: 100vw;
     height: 15vh;
+    background-color: #A9CCE3;
 }
 
 .logo {
     width: 50%;
 }
 
+.logo>* {
+    margin-inline-start: 1rem;
+}
+
 .nav-bar {
     width: 50%;
     align-items: center;
+}
+
+.appsus-logo {
+    width: 3rem;
+    
 }

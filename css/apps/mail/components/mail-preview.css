@@ -100,5 +100,10 @@
   }
 
   .mail-list {
-    margin: auto;
+    margin-inline-start: 1rem;
+    width: 80%;
+  }
+
+  .mail-actions >* {
+      margin-inline-start: 1rem;
   }

@@ -7,8 +7,11 @@ import noteFilter from '../cmps/note-filter.cmp.js';
 export default {
     template: `
         <section v-if="notes">
-            <note-filter @filtered="setFilter" @filterType="setTypeFilter" ></note-filter>
-            <note-add @addNote="updateNotes" ></note-add>
+            <div class="note-app-controller">
+                <note-filter @filtered="setFilter" @filterType="setTypeFilter" ></note-filter>
+                <note-add @addNote="updateNotes" ></note-add>
+
+            </div>
             <note-list @remove="removeNote" :notes="noteForDisplay" />
         </section>
     `,
